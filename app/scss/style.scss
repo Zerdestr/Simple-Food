@@ -1,10 +1,123 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'global';
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
 
+.header {
+  padding: 60px 0;
+}
 
+.menu {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  &__list {
+    display: flex;
+    margin: 0 68px 0 auto;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  &__item:not(:last-child) {
+    margin-right: 45px;
+  }
+  &__link {
+    transition: color 0.25s ease-in-out, text-shadow 0.1s ease-in-out;
+    &--active {
+      color: $orange-900;
+    }
+    &:focus {
+      outline: 2px solid rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+    }
+    &:hover {
+      color: $orange-900;
+    }
+    &:active {
+      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+      color: $dark;
+      outline: 0;
+    }
+  }
+}
 
+.logo {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+  &:focus {
+    outline: 2px solid rgba(255, 104, 56, 0.7);
+    border-radius: 3px;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}
 
+.user-nav {
+  display: flex;
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 5px;
+    transition: background-color 0.25s ease-in-out;
+    path,
+    ellipse {
+      transition: stroke 0.25s ease-in-out;
+    }
+    &:focus {
+      background-color: rgba($color: $orange-900, $alpha: 0.1);
+      outline: 2px solid rgba(255, 104, 56, 0.7);
+    }
+    &:hover {
+      background-color: rgba($color: $orange-900, $alpha: 1);
 
-@import 'media';
+      path,
+      ellipse {
+        stroke: #fff;
+      }
+
+      .user-nav__num {
+        background-color: #fff;
+        color: $orange-900;
+      }
+    }
+    &:active {
+      background-color: #fff2ed;
+      outline: 0;
+      path,
+      ellipse {
+        stroke: $dark;
+      }
+      .user-nav__num {
+        background-color: $orange-900;
+        color: $white;
+      }
+    }
+  }
+
+  &__num {
+    position: absolute;
+    top: 8px;
+    right: 4px;
+    width: 14px;
+    height: 14px;
+    font-size: 10px;
+    line-height: 1.4;
+    color: $white;
+    background-color: $orange-900;
+    border-radius: 50%;
+    text-align: center;
+    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+  }
+}
+
+@import "media";
