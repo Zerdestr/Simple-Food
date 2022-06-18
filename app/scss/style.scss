@@ -3,9 +3,6 @@
 @import "reset";
 @import "global";
 
-
-
-
 .header {
   padding: 60px 0;
 }
@@ -147,15 +144,15 @@
     max-width: 450px;
     margin-bottom: 20px;
   }
-  &__btm {
+  &__btn {
     display: inline-block;
   }
-  &__btm:not(:last-child) {
+  &__btn:not(:last-child) {
     margin-right: 34px;
   }
 }
 
-.buttom {
+.button {
   padding: 12px 32px;
   background-color: $orange-900;
   border-radius: 6px;
@@ -207,6 +204,57 @@
     color: $darkBlue-900;
     text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
     outline: transparent;
+  }
+}
+
+.categories {
+  &__title {
+    margin-bottom: 60px;
+  }
+  &__sorting {
+    display: flex;
+    margin-bottom: 45px;
+  }
+  &__group:not(:last-child) {
+    margin-right: 20px;
+  }
+  &__btn {
+    padding: 13px 32px;
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px #ececec;
+  }
+  &__btn svg {
+    margin-right: 10px;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 30px;
+  }
+  &__item {
+    max-width: 210px;
+    text-align: center;
+    padding-top: 170px;
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px #ececec;
+    background-repeat: no-repeat;
+    background-position: center 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__text {
+    margin-bottom: 10px;
+  }
+  &__price {
+    margin-top: auto;
+    margin-bottom: 10px;
+  }
+  &__add {
+    margin-bottom: 10px;
   }
 }
 
