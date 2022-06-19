@@ -1,6 +1,6 @@
+@import "reset";
 @import "fonts";
 @import "vars";
-@import "reset";
 @import "global";
 
 .header {
@@ -10,7 +10,6 @@
 .menu {
   display: flex;
   justify-content: space-between;
-  position: relative;
   align-items: center;
   &__list {
     display: flex;
@@ -27,16 +26,16 @@
       color: $orange-900;
     }
     &:focus {
-      outline: 2px solid rgba(255, 104, 56, 0.7);
+      outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
       border-radius: 5px;
     }
     &:hover {
       color: $orange-900;
     }
     &:active {
-      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
       color: $dark;
-      outline: 0;
+      text-shadow: 2px 2px 5px rgba($color: $dark, $alpha: 0.5);
+      outline: transparent;
     }
   }
 }
@@ -45,7 +44,7 @@
   opacity: 1;
   transition: opacity 0.25s ease-in-out;
   &:focus {
-    outline: 2px solid rgba(255, 104, 56, 0.7);
+    outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
     border-radius: 3px;
   }
   &:hover {
@@ -59,6 +58,9 @@
 
 .user-nav {
   display: flex;
+  &__item {
+    position: relative;
+  }
   &__item:not(:last-child) {
     margin-right: 10px;
   }
@@ -76,24 +78,22 @@
     }
     &:focus {
       background-color: rgba($color: $orange-900, $alpha: 0.1);
-      outline: 2px solid rgba(255, 104, 56, 0.7);
+      outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
     }
     &:hover {
       background-color: rgba($color: $orange-900, $alpha: 1);
-
       path,
       ellipse {
-        stroke: #fff;
+        stroke: $white;
       }
-
       .user-nav__num {
-        background-color: #fff;
+        background-color: $white;
         color: $orange-900;
       }
     }
     &:active {
       background-color: #fff2ed;
-      outline: 0;
+      outline: transparent;
       path,
       ellipse {
         stroke: $dark;
@@ -123,19 +123,21 @@
 
 .hero {
   &__inner {
+    display: flex;
+    align-items: center;
     background-repeat: no-repeat;
     background-position: right;
-    background-size: contain;
-    padding: 155px 0;
+    background-size: 560px 660px;
+    height: calc(100vh - 160px);
   }
   &__title {
+    @extend %rubik-500;
     font-size: 66px;
     line-height: 1.3;
-    max-width: 450px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    @extend %rubik-500;
     font-weight: 500;
+    text-transform: uppercase;
+    max-width: 450px;
+    margin-bottom: 20px;
   }
   &__subtitle {
     color: $orange-900;
@@ -144,53 +146,54 @@
     max-width: 450px;
     margin-bottom: 20px;
   }
-  &__btn {
-    display: inline-block;
-  }
-  &__btn:not(:last-child) {
+  &__item:not(:last-child) {
     margin-right: 34px;
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
   }
 }
 
 .button {
-  padding: 12px 32px;
-  background-color: $orange-900;
-  border-radius: 6px;
   color: $white;
   font-size: 18px;
   line-height: 1.3;
+  padding: 12px 32px;
+  background-color: $orange-900;
+  border-radius: 6px;
   outline: 2px solid transparent;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, outline 0.3s ease-in-out;
   &:focus {
-    background-color: rgba($color: #ff7450, $alpha: 0.1);
-    outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
     color: $orange-900;
+    background-color: rgba($color: $orange-900, $alpha: 0.1);
+    outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
   }
   &:hover {
-    background-color: $white;
     color: $orange-900;
+    background-color: $white;
     outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
   }
   &:active {
     outline: transparent;
-    background-color: rgba($color: #ff7450, $alpha: 0.1);
+    background-color: rgba($color: $orange-900, $alpha: 0.1);
   }
 }
 
 .show-more {
-  color: $darkBlue-900;
+  display: inline-block;
   position: relative;
+  color: $darkBlue-900;
   border-radius: 5px;
   transition: color 0.3s ease-in-out;
-  display: inline-block;
   &::after {
     content: "";
     position: absolute;
     right: 0;
     left: 0;
     bottom: 6px;
-    background-color: $darkBlue-900;
     height: 1px;
+    background-color: $darkBlue-900;
     transition: background-color 0.3s ease-in-out;
   }
   &:focus {
@@ -204,7 +207,7 @@
   }
   &:active {
     color: $darkBlue-900;
-    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    text-shadow: 2px 2px 5px rgba($color: $dark, $alpha: 0.5);
     outline: transparent;
   }
 }
@@ -221,20 +224,20 @@
     margin-right: 20px;
   }
   &__btn {
-    padding: 13px 32px;
     display: flex;
     align-items: center;
-    background-color: $white;
+    padding: 13px 32px;
     border-radius: 5px;
-    box-shadow: 0 0 0 1px #ececec;
+    background-color: $white;
+    box-shadow: 0 0 0 1px $silver-200;
     outline: 2px solid transparent;
-    svg {
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, outline 0.3s ease-in-out;
+    .categories__icon {
       margin-right: 10px;
       path {
         transition: fill 0.3s ease-in-out;
       }
     }
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, outline 0.3s ease-in-out;
     &--active {
       background-color: $orange-900;
       color: $white;
@@ -246,16 +249,16 @@
       outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
     }
     &:hover {
-      background-color: rgba($color: #ff7450, $alpha: 0.1);
-      outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
       color: $orange-900;
+      background-color: rgba($color: $orange-900, $alpha: 0.1);
+      outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
       path {
         fill: $orange-900;
       }
       &:active {
         color: $darkBlue-900;
+        background-color: rgba($color: $orange-900, $alpha: 0.1);
         outline: transparent;
-        background-color: rgba($color: #ff7450, $alpha: 0.1);
         path {
           fill: $darkBlue-900;
         }
@@ -268,63 +271,204 @@
     grid-gap: 30px;
     margin-bottom: 60px;
   }
-  &__item {
-    max-width: 210px;
-    text-align: center;
-    padding-top: 170px;
-    background-color: $white;
-    border-radius: 5px;
-    box-shadow: 0 0 0 1px #ececec;
-    background-repeat: no-repeat;
-    background-position: center 20px;
+  .product {
     display: flex;
     flex-direction: column;
-    transition: outline 0.3s ease-in-out;
-    outline: 2px solid transparent;
-    &:hover {
-      outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
-    }
-  }
-  &__text {
-    margin-bottom: 10px;
-    font-size: 15px;
-    line-height: 18px;
-  }
-  &__price {
-    margin-top: auto;
-    margin-bottom: 10px;
-    font-size: 15px;
-    line-height: 1.4;
-    @extend %rubik-500;
-  }
-  &__add {
-    background-color: $orange-900;
-    padding: 7px 13px;
-    max-width: 100px;
+    max-width: 210px;
+    padding-top: 170px;
+    text-align: center;
     border-radius: 5px;
-    margin: 0 auto 10px;
-    font-size: 14px;
-    line-height: 1.3;
-    color: $white;
-    transition: color 0.3s ease-in-out;
-    &:focus {
-      background-color: rgba($color: #ff7450, $alpha: 0.1);
-      outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
-      color: $orange-900;
-    }
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-position: center 20px;
+    box-shadow: 0 0 0 1px $silver-200;
+    outline: 2px solid transparent;
+    transition: outline 0.3s ease-in-out;
     &:hover {
-      background-color: $white;
-      color: $orange-900;
       outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
     }
-    &:active {
-      outline: transparent;
-      background-color: rgba($color: #ff7450, $alpha: 0.1);
+    &__text {
+      font-size: 15px;
+      line-height: 18px;
+      margin-bottom: 10px;
+    }
+    &__price {
+      @extend %rubik-500;
+      font-size: 15px;
+      line-height: 1.4;
+      margin-top: auto;
+      margin-bottom: 10px;
+    }
+    &__add {
+      font-size: 14px;
+      line-height: 1.3;
+      max-width: 100px;
+      padding: 7px 13px;
+      margin: 0 auto 10px;
+      color: $white;
+      background-color: $orange-900;
+      border-radius: 5px;
+      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      &:focus {
+        color: $orange-900;
+        background-color: rgba($color: $orange-900, $alpha: 0.1);
+        outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+      }
+      &:hover {
+        color: $orange-900;
+        background-color: $white;
+        outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+      }
+      &:active {
+        background-color: rgba($color: $orange-900, $alpha: 0.1);
+        outline: transparent;
+      }
     }
   }
   &__show-more {
     margin-left: 50%;
     transform: translateX(-50%);
+  }
+}
+
+.footer {
+  &__inner {
+    display: flex;
+    margin-bottom: 60px;
+  }
+  &__form {
+    max-width: 200px;
+    margin-right: 70px;
+  }
+  &__input {
+    font-size: 14px;
+    line-height: 1.3;
+    padding: 13px 17px;
+    margin: 30px 0 12px;
+    max-width: 200px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    opacity: 0.9;
+    &::placeholder {
+      color: $gray;
+      transition: color 0.3s ease-in-out;
+    }
+    &:focus {
+      outline: 2px solid $orange-900;
+    }
+    &:hover::placeholder {
+      color: $darkBlue-900;
+    }
+  }
+  &__button {
+    display: flex;
+    @extend %rubik-500;
+    font-size: 14px;
+    padding: 13px 39px;
+    margin: 0;
+    .footer__icon {
+      margin-right: 15px;
+      path {
+        transition: fill 0.3s ease-in-out;
+      }
+    }
+    &:focus {
+      path {
+        fill: $orange-900;
+      }
+    }
+    &:hover {
+      path {
+        fill: $orange-900;
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 175px;
+    font-size: 18px;
+    line-height: 1.3;
+  }
+  &__item {
+    margin: 0 70px 20px 0;
+  }
+  &__link:focus {
+    border-radius: 5px;
+    outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+  }
+  &__contacts {
+    margin-right: 64px;
+  }
+  .contacts {
+    &__info {
+      margin-bottom: 15px;
+    }
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+    &__link {
+      padding-left: 31px;
+      font-size: 16px;
+      line-height: 2;
+      background-repeat: no-repeat;
+      background-position: center left;
+      &:focus {
+        border-radius: 5px;
+        outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+      }
+    }
+  }
+  .social {
+    display: flex;
+    &__item:not(:last-child) {
+      margin-right: 13px;
+    }
+    &__link {
+      height: 39px;
+      border-radius: 50%;
+      outline: 2px solid transparent;
+      transition: outline 0.3s ease-in-out;
+      circle,
+      path {
+        transition: fill 0.3s ease-in-out;
+      }
+
+      &:focus {
+        circle {
+          fill: rgba($color: $orange-900, $alpha: 0.1);
+        }
+        outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+      }
+      &:hover {
+        circle {
+          fill: $orange-900;
+        }
+        path {
+          fill: $white;
+        }
+      }
+      &:active {
+        circle {
+          fill: rgba($color: $orange-900, $alpha: 0.1);
+        }
+        path {
+          fill: $orange-900;
+        }
+        outline: transparent;
+      }
+    }
+  }
+
+  &__copy {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 14px;
+    line-height: 1;
   }
 }
 
