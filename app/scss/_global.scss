@@ -1,4 +1,6 @@
 body {
+  display: flex;
+  flex-direction: column;
   @extend %rubik-400;
   font-size: 20px;
   line-height: 1.5;

@@ -107,7 +107,7 @@
 
         <ul class="categories__sorting">
           <li class="categories__group">
-            <button class="categories__btn categories__btn--active" type="button">
+            <button class=" categories__btn categories__btn--active" type="button" rel="burgers">
               <svg class="categories__icon" width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#a)" fill="#363853">
                   <path
@@ -127,7 +127,7 @@
           </li>
 
           <li class="categories__group">
-            <button class="categories__btn" type="button">
+            <button class="categories__btn" type="button" rel="pizza">
               <svg class="categories__icon" width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#a)" fill="#363853">
                   <path
@@ -147,7 +147,7 @@
           </li>
 
           <li class="categories__group">
-            <button class="categories__btn" type="button">
+            <button class="categories__btn" type="button" rel="sandwiches">
               <svg class="categories__icon" width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#a)" fill="#363853">
                   <path
@@ -167,7 +167,7 @@
           </li>
 
           <li class="categories__group">
-            <button class="categories__btn" type="button">
+            <button class="categories__btn" type="button" rel="asian">
               <svg class="categories__icon" width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#a)" fill="#363853">
                   <path
@@ -187,7 +187,7 @@
           </li>
 
           <li class="categories__group">
-            <button class="categories__btn" type="button">
+            <button class="categories__btn" type="button" rel="sets">
               <svg class="categories__icon" width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#a)" fill="#363853">
                   <path
@@ -213,8 +213,7 @@
           </li>
         </ul>
 
-        <ul class="categories__items">
-          <span class="sr-only">Список бургеров</span>
+        <ul class="categories__items categories__items--active" id="burgers">
           <li class="categories__item product" style="background-image:url(images/categories-item-1.png);">
             <div class="product__text">
               <p>Чизбургер с листьями салата</p>
@@ -296,6 +295,260 @@
           </li>
 
         </ul>
+
+        <ul class="categories__items" id="pizza">
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-1.png);">
+            <div class="product__text">
+              <p>Пицца</p>
+            </div>
+            <span class="product__price">160 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-2.png);">
+            <div class="product__text">
+              <p>Пицца</p>
+            </div>
+            <span class="product__price">190 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-3.png);">
+            <div class="product__text">
+              <p>Пицца</p>
+            </div>
+            <span class="product__price">260 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-4.png);">
+            <div class="product__text">
+              <p>Пицца</p>
+            </div>
+            <span class="product__price">199 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-5.png);">
+            <div class="product__text">
+              <p>Пицца</p>
+            </div>
+            <span class="product__price">180 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-1.png);">
+            <div class="product__text">
+              <p>Пицца</p>
+            </div>
+            <span class="product__price">160 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-2.png);">
+            <div class="product__text">
+              <p>Пицца</p>
+            </div>
+            <span class="product__price">190 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-3.png);">
+            <div class="product__text">
+              <p>Пицца</p>
+            </div>
+            <span class="product__price">260 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-4.png);">
+            <div class="product__text">
+              <p>Пицца</p>
+            </div>
+            <span class="product__price">199 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-5.png);">
+            <div class="product__text">
+              <p>Пицца</p>
+            </div>
+            <span class="product__price">180 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+        </ul>
+
+        <ul class="categories__items" id="sandwiches">
+          <li class="categories__item product" style="background-image:url(images/categories-item-1.png);">
+            <div class="product__text">
+              <p>Сендвич</p>
+            </div>
+            <span class="product__price">160 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-2.png);">
+            <div class="product__text">
+              <p>Сендвич</p>
+            </div>
+            <span class="product__price">190 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-3.png);">
+            <div class="product__text">
+              <p>Сендвич</p>
+            </div>
+            <span class="product__price">260 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-4.png);">
+            <div class="product__text">
+              <p>Сендвич</p>
+            </div>
+            <span class="product__price">199 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-5.png);">
+            <div class="product__text">
+              <p>Сендвич</p>
+            </div>
+            <span class="product__price">180 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-1.png);">
+            <div class="product__text">
+              <p>Сендвич</p>
+            </div>
+            <span class="product__price">160 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-2.png);">
+            <div class="product__text">
+              <p>Сендвич</p>
+            </div>
+            <span class="product__price">190 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+        </ul>
+
+        <ul class="categories__items" id="asian">
+          <li class="categories__item product" style="background-image:url(images/categories-item-1.png);">
+            <div class="product__text">
+              <p>Азиатская кухня</p>
+            </div>
+            <span class="product__price">160 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-1.png);">
+            <div class="product__text">
+              <p>Азиатская кухня</p>
+            </div>
+            <span class="product__price">160 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-1.png);">
+            <div class="product__text">
+              <p>Азиатская кухня</p>
+            </div>
+            <span class="product__price">160 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-1.png);">
+            <div class="product__text">
+              <p>Азиатская кухня</p>
+            </div>
+            <span class="product__price">160 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-1.png);">
+            <div class="product__text">
+              <p>Азиатская кухня</p>
+            </div>
+            <span class="product__price">160 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-1.png);">
+            <div class="product__text">
+              <p>Азиатская кухня</p>
+            </div>
+            <span class="product__price">160 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-1.png);">
+            <div class="product__text">
+              <p>Азиатская кухня</p>
+            </div>
+            <span class="product__price">160 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-1.png);">
+            <div class="product__text">
+              <p>Азиатская кухня</p>
+            </div>
+            <span class="product__price">160 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-1.png);">
+            <div class="product__text">
+              <p>Азиатская кухня</p>
+            </div>
+            <span class="product__price">160 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+        </ul>
+
+        <ul class="categories__items" id="sets">
+          <li class="categories__item product" style="background-image:url(images/categories-item-1.png);">
+            <div class="product__text">
+              <p>Сет</p>
+            </div>
+            <span class="product__price">160 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-1.png);">
+            <div class="product__text">
+              <p>Сет</p>
+            </div>
+            <span class="product__price">160 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-1.png);">
+            <div class="product__text">
+              <p>Сет</p>
+            </div>
+            <span class="product__price">160 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+          <li class="categories__item product" style="background-image:url(images/categories-item-1.png);">
+            <div class="product__text">
+              <p>Сет</p>
+            </div>
+            <span class="product__price">160 грн.</span>
+            <button class="product__add">В корзину</button>
+          </li>
+
+        </ul>
+
         <a class="show-more categories__show-more" href="#">Показать еще</a>
       </div>
     </section>
@@ -310,7 +563,7 @@
           <a class="logo" href="#">
             <img class="logo__image" src="images/logo.svg" alt="Фото логотипа сайта">
           </a>
-          
+
           <span class="sr-only">Форма для оформления имейл рассылки</span>
           <label>
             <span class="sr-only">Поле для ввода ващего имейла</span>
