@@ -1,36 +1,40 @@
 @font-face {
-  font-family: 'Rubik-Light';
-  src: url('../fonts/Rubik-Light.ttf') format('truetype'),
-       url('../fonts/Rubik-Light.woff') format('woff'),
-       url('../fonts/Rubik-Light.woff2') format('woff2');
-  font-weight: normal;
+  font-family: 'Rubik';
+  src: 
+  url('../fonts/Rubik-Light.woff2') format('woff2'),
+  url('../fonts/Rubik-Light.woff') format('woff'),
+  url('../fonts/Rubik-Light.ttf') format('truetype');
+  font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Rubik-Regular';
-  src: url('../fonts/Rubik-Regular.ttf') format('truetype'),
-       url('../fonts/Rubik-Regular.woff') format('woff'),
-       url('../fonts/Rubik-Regular.woff2') format('woff2');
-  font-weight: normal;
+  font-family: 'Rubik';
+  src:
+  url('../fonts/Rubik-Regular.woff2') format('woff2'),
+  url('../fonts/Rubik-Regular.woff') format('woff'),
+  url('../fonts/Rubik-Regular.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Rubik-Medium';
-  src: url('../fonts/Rubik-Medium.ttf') format('truetype'),
-       url('../fonts/Rubik-Medium.woff') format('woff'),
-       url('../fonts/Rubik-Medium.woff2') format('woff2');
-  font-weight: normal;
+  font-family: 'Rubik';
+  src: 
+  url('../fonts/Rubik-Medium.woff2') format('woff2'),
+  url('../fonts/Rubik-Medium.woff') format('woff'),
+  url('../fonts/Rubik-Medium.ttf') format('truetype');
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Rubik-SemiBold';
-  src: url('../fonts/Rubik-SemiBold.ttf') format('truetype'),
-       url('../fonts/Rubik-SemiBold.woff') format('woff'),
-       url('../fonts/Rubik-SemiBold.woff2') format('woff2');
-  font-weight: normal;
+  font-family: 'Rubik';
+  src:
+  url('../fonts/Rubik-SemiBold.woff2') format('woff2'),
+  url('../fonts/Rubik-SemiBold.woff') format('woff'),
+  url('../fonts/Rubik-SemiBold.ttf') format('truetype');
+  font-weight: 600;
   font-style: normal;
 }
 
