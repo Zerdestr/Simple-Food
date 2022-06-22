@@ -14,18 +14,28 @@ $(function () {
 
   const swiper = new Swiper('.swiper', {
 
+    autoplay: {
+      delay: 5000,
+    },
+
+    wrapperClass: 'swiper__wrapper',
+
+    slideClass: 'swiper__slide',
+
     direction: 'horizontal',
     loop: true,
 
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper__pagination',
       type: 'bullets',
+      bulletClass: 'swiper__pagination-bullet',
+      bulletActiveClass: 'swiper__pagination-bullet--active',
       clickable: true
     },
 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper__button--next',
+      prevEl: '.swiper__button--prev',
     }
   });
 });
