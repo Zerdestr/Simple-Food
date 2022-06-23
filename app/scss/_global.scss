@@ -111,52 +111,486 @@ body {
 }
 
 .product {
-    display: flex;
-    flex-direction: column;
-    max-width: 210px;
-    padding: 0 10px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 210px;
+  padding: 0 10px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: $white;
+  box-shadow: 0 0 0 1px $silver-200;
+  outline: 2px solid transparent;
+  transition: outline 0.3s ease-in-out;
+
+  &:hover {
+    outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+  }
+
+  &__link {
+    margin: 20px 0 10px;
+  }
+
+  &__image {
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 10px;
+    min-height: 36px;
+    font-weight: 400;
+  }
+
+  &__price {
+    font-family: "Rubik", "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-top: auto;
+    margin-bottom: 10px;
+  }
+
+  &__add {
+    font-size: 14px;
+    line-height: 1.3;
+    max-width: 100px;
+    padding: 7px 13px;
+    margin: 0 auto 20px;
     border-radius: 5px;
-    background-color: $white;
-    box-shadow: 0 0 0 1px $silver-200;
+  }
+}
+
+.card {
+  position: relative;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 3px 15px rgba($color: $orange-900, $alpha: 0.5);
+  }
+  &__image {
+    margin-bottom: 15px;
+  }
+
+  &__name {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.3;
+    margin: 0 20px 20px;
+  }
+
+  &__timetable {
+    font-family: "Rubik", "Roboto", sans-serif;
+    font-weight: 300;
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding-left: 32px;
+    margin-left: 20px;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  &__icon {
+    width: 14px;
+    height: 12px;
+    color: $white;
+    position: absolute;
+    right: 30px;
+    top: 11px;
+    transition: right 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  &__link {
+    position: absolute;
+    display: flex;
+    padding: 12px;
+    width: 73px;
+    height: 33px;
+    background-color: $orange-900;
+    border-radius: 10px;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 20px;
     outline: 2px solid transparent;
-    transition: outline 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, outline 0.3s ease-in-out, justify-content 0.3s ease-in-out;
+
+    &:focus {
+      background-color: rgba($color: $orange-900, $alpha: 0.1);
+      outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+
+      .card__icon {
+        color: $orange-900;
+      }
+    }
 
     &:hover {
+      background-color: $white;
       outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+
+      .card__icon {
+        color: $orange-900;
+        right: 12px;
+      }
+    }
+
+    &:active {
+      outline: transparent;
+      background-color: rgba($color: $orange-900, $alpha: 0.1);
+
+      .card__icon {
+        right: 32px;
+      }
+    }
+  }
+}
+
+.header {
+  padding: 60px 0;
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__list {
+      display: flex;
+      margin: 0 68px 0 auto;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 45px;
     }
 
     &__link {
-      margin: 20px 0 10px;
-    }
+      transition: color 0.25s ease-in-out, text-shadow 0.1s ease-in-out;
 
-    &__image {
-      margin: 0 auto;
-    }
+      &--active {
+        color: $orange-900;
+      }
 
-    &__text {
-      font-size: 15px;
-      line-height: 18px;
-      margin-bottom: 10px;
-      min-height: 36px;
-      font-weight: 400;
-    }
+      &:focus {
+        outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+        border-radius: 5px;
+      }
 
-    &__price {
-      font-family: "Rubik", "Roboto", sans-serif;
-      font-weight: 500;
-      font-size: 15px;
-      line-height: 1.4;
-      margin-top: auto;
-      margin-bottom: 10px;
-    }
+      &:hover {
+        color: $orange-900;
+      }
 
-    &__add {
-      font-size: 14px;
-      line-height: 1.3;
-      max-width: 100px;
-      padding: 7px 13px;
-      margin: 0 auto 20px;
-      border-radius: 5px;
+      &:active {
+        color: $dark;
+        text-shadow: 2px 2px 5px rgba($color: $dark, $alpha: 0.5);
+        outline: transparent;
+      }
     }
   }
+
+  .logo {
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
+
+    &:focus {
+      outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+      border-radius: 3px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+      outline: transparent;
+    }
+  }
+
+  .user-nav {
+    display: flex;
+
+    &__item {
+      position: relative;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &__icon {
+      padding: 12px;
+      height: 44px;
+      transition: all 0.3s ease;
+    }
+
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 5px;
+      transition: background-color 0.25s ease-in-out;
+
+      &:focus {
+        background-color: rgba($color: $orange-900, $alpha: 0.1);
+        outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+      }
+
+      &:hover {
+        background-color: rgba($color: $orange-900, $alpha: 1);
+
+        .user-nav__icon {
+          color: $white;
+        }
+
+        .user-nav__num {
+          background-color: $white;
+          color: $orange-900;
+        }
+      }
+
+      &:active {
+        background-color: #fff2ed;
+        outline: transparent;
+
+        .user-nav__icon {
+          color: $dark;
+        }
+
+        .user-nav__num {
+          background-color: $orange-900;
+          color: $white;
+        }
+      }
+    }
+
+    &__num {
+      position: absolute;
+      top: 8px;
+      right: 4px;
+      width: 14px;
+      height: 14px;
+      font-size: 10px;
+      line-height: 1.4;
+      color: $white;
+      background-color: $orange-900;
+      border-radius: 50%;
+      text-align: center;
+      transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+    }
+  }
+}
+
+.footer {
+  .contacts-info {
+    &__inner {
+      display: flex;
+      margin-bottom: 60px;
+    }
+
+    &__wrapper {
+      margin-right: 70px;
+    }
+
+    &__form {
+      max-width: 200px;
+    }
+
+    &__input {
+      font-size: 14px;
+      line-height: 1.3;
+      padding: 13px 17px;
+      margin: 30px 0 12px;
+      max-width: 200px;
+      border: 1px solid $gray;
+      border-radius: 5px;
+      opacity: 0.9;
+
+      &::placeholder {
+        color: $gray;
+        transition: color 0.3s ease-in-out;
+      }
+
+      &:focus {
+        outline: 2px solid $orange-900;
+        border-color: transparent;
+      }
+
+      &:hover::placeholder {
+        color: $darkBlue-900;
+      }
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      font-family: "Rubik", "Roboto", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      padding: 13px 39px;
+      margin: 0;
+
+      &:focus {
+        .contacts-info__icon {
+          fill: $orange-900;
+        }
+      }
+
+      &:hover {
+        .contacts-info__icon {
+          fill: $orange-900;
+        }
+      }
+    }
+
+    &__icon {
+      margin-right: 16px;
+      width: 14px;
+      height: 14px;
+      fill: $white;
+    }
+
+    &__info {
+      font-size: 18px;
+      line-height: 1.3;
+      column-count: 3;
+      margin-right: 69px;
+    }
+
+    &__item {
+      margin-bottom: 20px;
+    }
+
+    &__link {
+      transition: color 0.3s ease-in-out;
+      display: inline-block;
+      &:focus {
+        border-radius: 5px;
+        outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+      }
+
+      &:hover {
+        color: $orange-900;
+      }
+
+      &:active {
+        color: $dark;
+        text-shadow: 2px 2px 5px rgba($color: $dark, $alpha: 0.5);
+        outline: transparent;
+      }
+    }
+
+    &__address {
+      margin-right: 64px;
+    }
+
+    .contacts {
+      &__info {
+        margin-bottom: 15px;
+      }
+
+      &__item:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      &__icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        color: $dark;
+        transition: color 0.3s ease-in-out;
+      }
+
+      &__link {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        line-height: 2;
+        background-repeat: no-repeat;
+        background-position: center left;
+        transition: color 0.3s ease-in-out;
+
+        &:focus {
+          border-radius: 5px;
+          outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+        }
+
+        &:hover {
+          color: $orange-900;
+
+          .contacts__icon {
+            color: $orange-900;
+          }
+        }
+
+        &:active {
+          color: $dark;
+          text-shadow: 2px 2px 5px rgba($color: $dark, $alpha: 0.5);
+          outline: transparent;
+
+          .contacts__icon {
+            color: $dark;
+          }
+        }
+      }
+    }
+
+    .social {
+      display: flex;
+
+      &__item:not(:last-child) {
+        margin-right: 13px;
+      }
+
+      &__icon {
+        width: 20px;
+        height: 20px;
+        transition: color 0.3s ease-in-out;
+      }
+
+      &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 39px;
+        width: 39px;
+        background-color: $silver-200;
+        border-radius: 50%;
+        outline: 2px solid transparent;
+        transition: outline 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+        &:focus {
+          background-color: rgba($color: $orange-900, $alpha: 0.1);
+          outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+        }
+
+        &:hover {
+          background-color: $orange-900;
+
+          .social__icon {
+            color: $white;
+          }
+        }
+
+        &:active {
+          outline: transparent;
+          background-color: rgba($color: $orange-900, $alpha: 0.1);
+
+          .social__icon {
+            color: $orange-900;
+          }
+        }
+      }
+    }
+
+    &__copy {
+      text-align: center;
+      padding: 30px 0;
+      font-size: 14px;
+      line-height: 1;
+    }
+  }
+}
