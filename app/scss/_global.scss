@@ -247,8 +247,28 @@ body {
   }
 }
 
+.logo {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+
+  &:focus {
+    outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+    border-radius: 3px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+    outline: transparent;
+  }
+}
+
 .header {
   padding: 60px 0;
+
   .menu {
     display: flex;
     justify-content: space-between;
@@ -286,25 +306,6 @@ body {
         text-shadow: 2px 2px 5px rgba($color: $dark, $alpha: 0.5);
         outline: transparent;
       }
-    }
-  }
-
-  .logo {
-    opacity: 1;
-    transition: opacity 0.25s ease-in-out;
-
-    &:focus {
-      outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
-      border-radius: 3px;
-    }
-
-    &:hover {
-      opacity: 0.8;
-    }
-
-    &:active {
-      opacity: 0.5;
-      outline: transparent;
     }
   }
 
@@ -467,8 +468,8 @@ body {
     &__link {
       transition: color 0.3s ease-in-out;
       display: inline-block;
+      border-radius: 5px;
       &:focus {
-        border-radius: 5px;
         outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
       }
 
