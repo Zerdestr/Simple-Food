@@ -248,6 +248,7 @@ body {
 }
 
 .logo {
+  display: block;
   opacity: 1;
   transition: opacity 0.25s ease-in-out;
 
@@ -541,6 +542,7 @@ body {
 
     .social {
       display: flex;
+      flex-wrap: wrap;
 
       &__item:not(:last-child) {
         margin-right: 13px;
