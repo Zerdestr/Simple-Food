@@ -9,9 +9,17 @@
     align-items: center;
     background-repeat: no-repeat;
     background-position: right;
-    background-size: contain;
+    background-size: calc(min(560px, 45%)) calc(min(660px, 100%));
     min-height: calc(100vh - 280px);
     margin-bottom: 120px;
+
+    @include mq('tablet') {
+      margin-bottom: 80px;
+      min-height: calc(100vh - 240px);
+      justify-content: center;
+      background-position: center;
+      background-size: 70% 100%;
+    }
   }
 
   &__title {
@@ -40,6 +48,11 @@
 
 .categories {
   margin-bottom: 120px;
+
+  @include mq('tablet') {
+    margin-bottom: 80px;
+  }
+
   &__title {
     margin-bottom: 60px;
     text-align: center;
@@ -124,10 +137,18 @@
   &__items {
     display: none;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 30px;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
     margin-bottom: 60px;
     &--active {
       display: grid;
+
+      @include mq('tablet') {
+        grid-row-gap: 15px;
+        grid-column-gap: 10px;
+        margin-bottom: 30px;
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
   }
 
@@ -138,17 +159,33 @@
 }
 
 .delivery {
+  margin-bottom: 120px;
+
+  @include mq('tablet') {
+    margin-bottom: 80px;
+  }
+
   &__inner {
     max-width: 1030px;
     padding: 60px 0;
-    margin: 0 auto 120px;
+    margin: 0 auto;
     background-repeat: no-repeat;
     background-position: left top;
+    background-size: calc(min(440px, 40%)) calc(min(585px, 100%));
+
+    @include mq('tablet') {
+      background-size: 70% 100%;
+      background-position: top center;
+    }
   }
 
   &__content {
     max-width: 470px;
     margin-left: auto;
+
+    @include mq('tablet') {
+      margin: 0 auto;
+    }
 
     :not(:last-child) {
       margin-bottom: 30px;
@@ -185,20 +222,50 @@
 
 .restaurants {
   margin-bottom: 120px;
+
+  @include mq('tablet') {
+    margin-bottom: 80px;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 45px;
   }
 
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+  .restaurants-swiper {
+    overflow: visible;
+
+    @include mq('tablet-2') {
+      overflow: hidden;
+    }
+
+    &__slide {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__wrapper {
+      box-sizing: inherit;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 30px;
+      grid-column-gap: 30px;
+      margin-bottom: 30px;
+
+      @include mq('tablet-2') {
+        display: flex;
+        grid-column-gap: 0;
+      }
+    }
   }
 }
 
 .reviews {
   margin-bottom: 120px;
+
+  @include mq('tablet') {
+    margin-bottom: 80px;
+  }
 
   &__title {
     margin-bottom: 45px;
@@ -209,49 +276,14 @@
     margin: 0 90px;
   }
 
-  .swiper {
+  .reviews-swiper {
     &__nav {
       display: flex;
       justify-content: center;
     }
 
     &__pagination {
-      width: max-content;
-      margin: 0 23px;
-      font-size: 24px;
-    }
-
-    &__pagination-bullet {
-      display: inline-block;
-      width: 15px;
-      height: 15px;
-      background-color: $gray;
-      opacity: 1;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
-
-      &:not(:last-child) {
-        margin-right: 15px;
-      }
-
-      &--active {
-        background-color: $orange-900;
-      }
-
-      &:focus {
-        outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
-      }
-
-      &:hover {
-        opacity: 0.7;
-      }
-
-      &:active {
-        background-color: $orange-900;
-        opacity: 0.7;
-        outline: transparent;
-      }
+      margin: 0 24px;
     }
 
     &__buttons-icon {
@@ -280,7 +312,7 @@
         background-color: rgba($color: $orange-900, $alpha: 0.1);
         border-color: rgba($color: $orange-900, $alpha: 0.5);
 
-        .swiper__buttons-icon {
+        .reviews-swiper__buttons-icon {
           color: rgba($color: $orange-900, $alpha: 0.5);
         }
       }
@@ -289,7 +321,7 @@
         outline: transparent;
         border-color: transparent;
 
-        .swiper__buttons-icon {
+        .reviews-swiper__buttons-icon {
           color: $orange-900;
         }
       }
@@ -297,15 +329,23 @@
   }
 }
 
-.slide {
+.reviews-slide {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 48px;
 
+  @include mq('tablet') {
+    flex-direction: column;
+  }
+
   &__photo {
     border-radius: 50%;
     align-self: flex-start;
+
+    @include mq('tablet') {
+      margin: 0 auto 20px;
+    }
   }
 
   &__quote {
@@ -361,16 +401,34 @@
 .mobile {
   margin-bottom: 120px;
 
+  @include mq('tablet') {
+    margin-bottom: 80px;
+  }
+
   &__inner {
     background-repeat: no-repeat;
-    background-position: center right;
+    background-position: top right;
+    background-size: calc(min(570px, 50%)) calc(min(380px, 100%));
     display: flex;
     align-items: center;
+
+    @include mq('tablet') {
+      background-size: 0;
+    }
   }
 
   &__content {
     padding: 40px 0;
     max-width: 540px;
+
+    @include mq('tablet-2') {
+      max-width: 50%;
+    }
+
+    @include mq('tablet') {
+      max-width: 100%;
+      padding: 0;
+    }
   }
 
   &__title {

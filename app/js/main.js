@@ -12,30 +12,70 @@ $(function () {
     }
   })
 
-  const swiper = new Swiper('.swiper', {
+  let reviewsSwiper = new Swiper('.reviews-swiper', {
 
     autoplay: {
       delay: 5000,
     },
 
-    wrapperClass: 'swiper__wrapper',
+    wrapperClass: 'reviews-swiper__wrapper',
 
-    slideClass: 'swiper__slide',
+    slideClass: 'reviews-swiper__slide',
 
     direction: 'horizontal',
     loop: true,
 
     pagination: {
-      el: '.swiper__pagination',
+      el: '.swipers__pagination',
       type: 'bullets',
-      bulletClass: 'swiper__pagination-bullet',
-      bulletActiveClass: 'swiper__pagination-bullet--active',
+      bulletClass: 'swipers__pagination-bullet',
+      bulletActiveClass: 'swipers__pagination-bullet--active',
       clickable: true
     },
 
     navigation: {
-      nextEl: '.swiper__button--next',
-      prevEl: '.swiper__button--prev',
+      nextEl: '.reviews-swiper__button--next',
+      prevEl: '.reviews-swiper__button--prev',
     }
   });
+
+
+
+  let catalogSlider = null;
+  let mediaQuerySize = 992;
+
+  function catalogSliderInit() {
+    if (!catalogSlider) {
+      catalogSlider = new Swiper('.restaurants-swiper', {
+        // ... ваши опции
+        autoplay: {
+          delay: 5000,
+        },
+
+        wrapperClass: 'restaurants-swiper__wrapper',
+
+        slideClass: 'restaurants-swiper__slide',
+
+        direction: 'horizontal',
+        loop: true,
+
+        pagination: {
+          el: '.swipers__pagination',
+          type: 'bullets',
+          bulletClass: 'swipers__pagination-bullet',
+          bulletActiveClass: 'swipers__pagination-bullet--active',
+          clickable: true
+        }
+      });
+    }
+  }
+
+  function catalogSliderDestroy() {
+    if (catalogSlider) {
+      catalogSlider.destroy();
+      catalogSlider = null;
+    }
+  }
+
+
 });
