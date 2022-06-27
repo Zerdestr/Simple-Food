@@ -29,7 +29,7 @@
             <img class="logo__image" src="images/logo.svg" alt="Изображение логотипа сайта" width="200" height="39">
           </a>
 
-          <ul class="menu__list">
+          <ul class="menu__list header-nav">
 
             <li class="menu__item">
               <a class="menu__link menu__link--active" href="#">Главная</a>
@@ -45,7 +45,7 @@
 
           </ul>
 
-          <ul class="header__user-nav user-nav">
+          <ul class="menu__user-nav user-nav">
 
             <li class="user-nav__item">
               <button class="user-nav__link" type="button">
@@ -68,9 +68,121 @@
 
           </ul>
 
+          <button class="menu__burger burger" type="button">
+            <span class="burger__line"></span>
+            <span class="sr-only">Открыть меню</span>
+          </button>
         </nav>
+
+
       </div>
     </header>
+    <nav class="mobile-menu">
+
+      <div class="container">
+
+        <a class="mobile-menu__logo logo" href="#">
+          <img class="logo__image" src="images/logo.svg" alt="Изображение логотипа сайта" width="200" height="39">
+        </a>
+
+      </div>
+
+
+      <button class="mobile-menu__burger burger burger--active" type="button">
+        <span class="burger__line"></span>
+        <span class="sr-only">Открыть меню</span>
+      </button>
+
+      <ul class="menu__list mobile-nav">
+
+        <li class="menu__item mobile-nav__item">
+          <a class="menu__link menu__link--active mobile-nav__link" href="#">Главная</a>
+        </li>
+
+        <li class="menu__item mobile-nav__item">
+          <a class="menu__link mobile-nav__link" href="#">Блюда</a>
+        </li>
+
+        <li class="menu__item mobile-nav__item">
+          <a class="menu__link mobile-nav__link" href="#">Контакты</a>
+        </li>
+
+      </ul>
+
+      <div class="container">
+
+        <address class="contacts mobile-menu__contacts">
+
+          <span class="sr-only">Где нас найти</span>
+
+          <ul class="contacts__info">
+
+            <li class="contacts__item">
+              <a class="contacts__link" href="#">
+
+                <svg class="contacts__icon">
+                  <use xlink:href="images/sprite.svg#icon-location"></use>
+                </svg>
+                <span class="sr-only">Наш адрес</span>
+                ул. Т.Г.Шевченко, 1
+              </a>
+
+            </li>
+
+            <li class="contacts__item">
+              <a class="contacts__link" href="tel:+380501112233">
+
+                <svg class="contacts__icon">
+                  <use xlink:href="images/sprite.svg#icon-calling"></use>
+                </svg>
+                <span class="sr-only">Наш номер телефона</span>
+                380501112233
+              </a>
+
+            </li>
+
+            <li class="contacts__item">
+              <a class="contacts__link" href="mailto:support@sfood.com">
+                <svg class="contacts__icon">
+                  <use xlink:href="images/sprite.svg#icon-message"></use>
+                </svg>
+                <span class="sr-only">Наш имейл</span>
+                support@sfood.com
+              </a>
+
+            </li>
+
+          </ul>
+
+          <ul class="contacts__social social">
+
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <span class="social__link-icon" style="-webkit-mask-image:url(./images/facebook.svg);"></span>
+                <span class=" sr-only">Ссылка на наш фейсбук</span>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <span class="social__link-icon" style="-webkit-mask-image:url(./images/twitter.svg);"></span>
+                <span class="sr-only">Ссылка на наш твиттер</span>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <span class="social__link-icon" style="-webkit-mask-image:url(./images/instagram.svg);"></span>
+                <span class="sr-only">Ссылка на наш инстаграмм</span>
+              </a>
+            </li>
+
+          </ul>
+        </address>
+
+      </div>
+
+    </nav>
 
     <main class="main">
 
@@ -90,8 +202,9 @@
                 <p>Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт</p>
               </div>
 
-              <a class="hero__button button" href="#">Заказать</a></li>
-              <a class="show-more" href="#">Подробнее</a></li>
+              <a class="hero__button button" href="#">Заказать</a>
+
+              <a class="show-more" href="#">Подробнее</a>
 
             </div>
 
@@ -313,8 +426,8 @@
                   <h3 class="product-card__text">
                     Чизбургер с листьями салата
                   </h3>
-                  <span class="product-card__price">160 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">160 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -327,8 +440,8 @@
                   <h3 class="product-card__text">
                     Бифбургер
                   </h3>
-                  <span class="product-card__price">140 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">140 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -341,8 +454,8 @@
                   <h3 class="product-card__text">
                     Королевский чизбургер
                   </h3>
-                  <span class="product-card__price">260 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">260 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -355,8 +468,8 @@
                   <h3 class="product-card__text">
                     Черный гамбургер
                   </h3>
-                  <span class="product-card__price">199 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">199 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -369,8 +482,8 @@
                   <h3 class="product-card__text">
                     Чикен бургер
                   </h3>
-                  <span class="product-card__price">180 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">180 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -383,8 +496,8 @@
                   <h3 class="product-card__text">
                     Чизбургер с листьями салата
                   </h3>
-                  <span class="product-card__price">160 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">160 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -397,8 +510,8 @@
                   <h3 class="product-card__text">
                     Бифбургер
                   </h3>
-                  <span class="product-card__price">140 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">140 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -411,8 +524,8 @@
                   <h3 class="product-card__text">
                     Королевский чизбургер
                   </h3>
-                  <span class="product-card__price">260 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">260 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -425,22 +538,8 @@
                   <h3 class="product-card__text">
                     Черный гамбургер
                   </h3>
-                  <span class="product-card__price">199 <span class="product__currency">грн.</span></span>
                 </a>
-                <button class="button product-card__add" type="button">В корзину</button>
-              </article>
-            </li>
-
-            <li class="categories__item">
-              <article class="categories__product product-card">
-                <a class="product-card__link" href="#">
-                  <img class="product-card__image" src="./images/categories-item-5.png" alt="Фото товара" width="140"
-                    height="140">
-                  <h3 class="product-card__text">
-                    Чикен бургер
-                  </h3>
-                  <span class="product-card__price">180 <span class="product__currency">грн.</span></span>
-                </a>
+                <span class="product-card__price">199 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -456,8 +555,8 @@
                   <h3 class="product-card__text">
                     Чизбургер с листьями салата
                   </h3>
-                  <span class="product-card__price">160 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">160 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -470,8 +569,8 @@
                   <h3 class="product-card__text">
                     Бифбургер
                   </h3>
-                  <span class="product-card__price">140 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">140 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -484,8 +583,8 @@
                   <h3 class="product-card__text">
                     Королевский чизбургер
                   </h3>
-                  <span class="product-card__price">260 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">260 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -498,8 +597,8 @@
                   <h3 class="product-card__text">
                     Черный гамбургер
                   </h3>
-                  <span class="product-card__price">199 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">199 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -512,8 +611,8 @@
                   <h3 class="product-card__text">
                     Чикен бургер
                   </h3>
-                  <span class="product-card__price">180 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">180 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -526,8 +625,8 @@
                   <h3 class="product-card__text">
                     Чизбургер с листьями салата
                   </h3>
-                  <span class="product-card__price">160 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">160 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -540,8 +639,8 @@
                   <h3 class="product-card__text">
                     Бифбургер
                   </h3>
-                  <span class="product-card__price">140 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">140 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -554,22 +653,8 @@
                   <h3 class="product-card__text">
                     Королевский чизбургер
                   </h3>
-                  <span class="product-card__price">260 <span class="product__currency">грн.</span></span>
                 </a>
-                <button class="button product-card__add" type="button">В корзину</button>
-              </article>
-            </li>
-
-            <li class="categories__item">
-              <article class="categories__product product-card">
-                <a class="product-card__link" href="#">
-                  <img class="product-card__image" src="./images/categories-item-4.png" alt="Фото товара" width="140"
-                    height="140">
-                  <h3 class="product-card__text">
-                    Черный гамбургер
-                  </h3>
-                  <span class="product-card__price">199 <span class="product__currency">грн.</span></span>
-                </a>
+                <span class="product-card__price">260 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -585,8 +670,8 @@
                   <h3 class="product-card__text">
                     Чизбургер с листьями салата
                   </h3>
-                  <span class="product-card__price">160 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">160 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -599,8 +684,8 @@
                   <h3 class="product-card__text">
                     Бифбургер
                   </h3>
-                  <span class="product-card__price">140 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">140 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -613,8 +698,8 @@
                   <h3 class="product-card__text">
                     Королевский чизбургер
                   </h3>
-                  <span class="product-card__price">260 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">260 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -627,8 +712,8 @@
                   <h3 class="product-card__text">
                     Черный гамбургер
                   </h3>
-                  <span class="product-card__price">199 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">199 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -641,8 +726,8 @@
                   <h3 class="product-card__text">
                     Чикен бургер
                   </h3>
-                  <span class="product-card__price">180 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">180 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -655,8 +740,8 @@
                   <h3 class="product-card__text">
                     Чизбургер с листьями салата
                   </h3>
-                  <span class="product-card__price">160 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">160 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -669,8 +754,22 @@
                   <h3 class="product-card__text">
                     Бифбургер
                   </h3>
-                  <span class="product-card__price">140 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">140 <span class="product__currency">грн.</span></span>
+                <button class="button product-card__add" type="button">В корзину</button>
+              </article>
+            </li>
+
+            <li class="categories__item">
+              <article class="categories__product product-card">
+                <a class="product-card__link" href="#">
+                  <img class="product-card__image" src="./images/categories-item-3.png" alt="Фото товара" width="140"
+                    height="140">
+                  <h3 class="product-card__text">
+                    Королевский чизбургер
+                  </h3>
+                </a>
+                <span class="product-card__price">260 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -686,8 +785,8 @@
                   <h3 class="product-card__text">
                     Чизбургер с листьями салата
                   </h3>
-                  <span class="product-card__price">160 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">160 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -700,8 +799,8 @@
                   <h3 class="product-card__text">
                     Бифбургер
                   </h3>
-                  <span class="product-card__price">140 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">140 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -714,8 +813,8 @@
                   <h3 class="product-card__text">
                     Королевский чизбургер
                   </h3>
-                  <span class="product-card__price">260 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">260 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -728,8 +827,8 @@
                   <h3 class="product-card__text">
                     Черный гамбургер
                   </h3>
-                  <span class="product-card__price">199 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">199 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -742,8 +841,8 @@
                   <h3 class="product-card__text">
                     Чикен бургер
                   </h3>
-                  <span class="product-card__price">180 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">180 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -756,8 +855,8 @@
                   <h3 class="product-card__text">
                     Чизбургер с листьями салата
                   </h3>
-                  <span class="product-card__price">160 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">160 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -770,8 +869,8 @@
                   <h3 class="product-card__text">
                     Бифбургер
                   </h3>
-                  <span class="product-card__price">140 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">140 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
@@ -784,12 +883,39 @@
                   <h3 class="product-card__text">
                     Королевский чизбургер
                   </h3>
-                  <span class="product-card__price">260 <span class="product__currency">грн.</span></span>
                 </a>
+                <span class="product-card__price">260 <span class="product__currency">грн.</span></span>
                 <button class="button product-card__add" type="button">В корзину</button>
               </article>
             </li>
 
+            <li class="categories__item">
+              <article class="categories__product product-card">
+                <a class="product-card__link" href="#">
+                  <img class="product-card__image" src="./images/categories-item-4.png" alt="Фото товара" width="140"
+                    height="140">
+                  <h3 class="product-card__text">
+                    Черный гамбургер
+                  </h3>
+                </a>
+                <span class="product-card__price">199 <span class="product__currency">грн.</span></span>
+                <button class="button product-card__add" type="button">В корзину</button>
+              </article>
+            </li>
+
+            <li class="categories__item">
+              <article class="categories__product product-card">
+                <a class="product-card__link" href="#">
+                  <img class="product-card__image" src="./images/categories-item-5.png" alt="Фото товара" width="140"
+                    height="140">
+                  <h3 class="product-card__text">
+                    Чикен бургер
+                  </h3>
+                </a>
+                <span class="product-card__price">180 <span class="product__currency">грн.</span></span>
+                <button class="button product-card__add" type="button">В корзину</button>
+              </article>
+            </li>
 
           </ul>
 
@@ -1009,6 +1135,7 @@
       </section>
 
       <section class="reviews">
+
         <div class="container">
 
           <h2 class="title reviews__title">Отзывы клиентов</h2>
@@ -1141,6 +1268,8 @@
             </div>
 
           </div>
+        </div>
+
       </section>
 
       <section class="mobile">
@@ -1197,7 +1326,7 @@
               </a>
 
               <h3 class="sr-only">Форма для оформления имейл рассылки</h3>
-              <form class="contacts-info__form" action="" name="form">
+              <form class="contacts-info__form" action="#" name="form">
 
                 <label for="get-email">
 
@@ -1260,7 +1389,8 @@
 
             <address class="contacts-info__address contacts">
 
-              <h3 class="sr-only">Где нас найти</h3>
+              <span class="sr-only">Где нас найти</span>
+
               <ul class="contacts__info">
 
                 <li class="contacts__item">
@@ -1311,7 +1441,7 @@
 
                 <li class="social__item">
                   <a class="social__link" href="#">
-                    <span class="social__link-icon" style="-webkit-mask-image:url(./images/instagram.svg);"></span>
+                    <span class="social__link-icon" style="-webkit-mask-image:url(./images/twitter.svg);"></span>
                     <span class="sr-only">Ссылка на наш твиттер</span>
                   </a>
                 </li>

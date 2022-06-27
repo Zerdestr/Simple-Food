@@ -1,16 +1,25 @@
 $(function () {
-  $(document).on('click', '.categories__btn', function (event) {
-    event.preventDefault();
-    if (!$(this).hasClass('categories__btn--active')) {
-      let tabId = $(this).attr("rel");
+  $(document)
+    .on('click', '.categories__btn', function (event) {
+      event.preventDefault();
+      if (!$(this).hasClass('categories__btn--active')) {
+        let tabId = $(this).attr("rel");
 
-      $(".categories__items").removeClass("categories__items--active");
-      $('.categories__btn').removeClass("categories__btn--active");
+        $(".categories__items").removeClass("categories__items--active");
+        $('.categories__btn').removeClass("categories__btn--active");
 
-      $(this).addClass("categories__btn--active");
-      $("#" + tabId).addClass("categories__items--active");
-    }
-  })
+        $(this).addClass("categories__btn--active");
+        $("#" + tabId).addClass("categories__items--active");
+      }
+    })
+    .on('click', '.menu__burger', function () {
+      $('body').toggleClass('no-scroll');
+      $('.mobile-menu').toggleClass('mobile-menu--active');
+    })
+    .on('click', '.mobile-menu__burger', function () { 
+      $('.menu__burger').trigger('click');
+     })
+
 
   let reviewsSwiper = new Swiper('.reviews-swiper', {
 
@@ -39,15 +48,13 @@ $(function () {
     }
   });
 
-
-
   let catalogSlider = null;
   let mediaQuerySize = 992;
 
   function catalogSliderInit() {
     if (!catalogSlider) {
       catalogSlider = new Swiper('.restaurants-swiper', {
-        // ... ваши опции
+
         autoplay: {
           delay: 5000,
         },
@@ -77,5 +84,18 @@ $(function () {
     }
   }
 
+  $(window).on('load resize', function () {
+
+    var windowWidth = $(this).innerWidth();
+
+
+    if (windowWidth <= mediaQuerySize) {
+
+      catalogSliderInit()
+    } else {
+
+      catalogSliderDestroy()
+    }
+  });
 
 });

@@ -7,9 +7,10 @@ $darkBlue-900: #363853;
 $dark: #31352b;
 $blue: #00aaff;
 $red: #ff2222;
+$fullDark: #000;
 
 $breakpoints: (
-  "phone": 560px,
+  "phone": 576px,
   "tablet": 768px,
   "tablet-2": 992px,
 );
@@ -26,3 +27,17 @@ $breakpoints: (
   }
 }
 
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+  $padding: unquote( ( $y / $x ) * 100 + '%' );
+  @if $pseudo {
+   &::before {
+    @include pseudo($pos: relative);
+    width: 100%;
+    padding-top: $padding;
+    padding-bottom: $padding;
+   }
+  } @else {
+   padding-top: $padding;
+   padding-bottom: $padding;
+  }
+}
