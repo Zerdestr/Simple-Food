@@ -23,6 +23,12 @@
 
   &__form {
     max-width: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    font-size: 0;
   }
 
   &__input {
