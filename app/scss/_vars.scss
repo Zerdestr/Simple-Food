@@ -27,17 +27,31 @@ $breakpoints: (
   }
 }
 
-@mixin responsive-ratio($x,$y, $pseudo: false) {
-  $padding: unquote( ( $y / $x ) * 100 + '%' );
+@mixin responsive-ratio($x, $y, $pseudo: false) {
+  $padding: calc(($y / $x) * 100%);
   @if $pseudo {
-   &::before {
-    @include pseudo($pos: relative);
-    width: 100%;
+    &::before {
+      @include pseudo($pos: relative);
+      width: 100%;
+      padding-top: $padding;
+      padding-bottom: $padding;
+    }
+  } @else {
     padding-top: $padding;
     padding-bottom: $padding;
-   }
+  }
+}
+
+@mixin line-clamp($lines: 1) {
+  @if $lines <=1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   } @else {
-   padding-top: $padding;
-   padding-bottom: $padding;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
   }
 }

@@ -1,0 +1,137 @@
+.contacts-info {
+  &__inner {
+    display: flex;
+    margin-bottom: 47px;
+
+    @include mq("tablet") {
+      flex-direction: column;
+      margin-bottom: 37px;
+    }
+  }
+
+  &__wrapper {
+    margin-right: 70px;
+
+    @include mq("tablet-2") {
+      margin-right: 20px;
+    }
+
+    @include mq("tablet") {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__form {
+    max-width: 200px;
+  }
+
+  &__input {
+    font-size: 14px;
+    line-height: 1.3;
+    padding: 13px 17px;
+    margin: 30px 0 12px;
+    max-width: 200px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    opacity: 0.9;
+
+    &::placeholder {
+      color: $gray;
+      transition: color 0.3s ease-in-out;
+    }
+
+    &:focus {
+      outline: 2px solid $orange-900;
+      border-color: transparent;
+    }
+
+    &:hover::placeholder {
+      color: $darkBlue-900;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 13px 39px 13px 39px;
+    margin: 0;
+
+    &:focus {
+      fill: $orange-900;
+      .contacts-info__icon {
+        fill: $orange-900;
+      }
+    }
+
+    &:hover {
+      .contacts-info__icon {
+        fill: $orange-900;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 16px;
+    width: 14px;
+    height: 14px;
+    fill: $white;
+  }
+
+  &__info {
+    font-size: 18px;
+    line-height: 1.3;
+    column-count: 3;
+    margin-right: 69px;
+
+    @include mq("tablet-2") {
+      margin-right: 20px;
+    }
+
+    @include mq("tablet") {
+      order: 1;
+      column-count: 1;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    transition: color 0.3s ease-in-out;
+    display: inline-block;
+    border-radius: 5px;
+
+    @include mq("tablet") {
+      display: block;
+    }
+
+    &:focus {
+      outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+    }
+
+    &:hover {
+      color: $orange-900;
+    }
+
+    &:active {
+      color: $dark;
+      text-shadow: 2px 2px 5px rgba($color: $dark, $alpha: 0.5);
+      outline: transparent;
+    }
+  }
+
+  &__address {
+    margin-right: 64px;
+  }
+
+  &__copy {
+    border-top: 1px solid $gray;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 14px;
+    line-height: 1;
+  }
+}

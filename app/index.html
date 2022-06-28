@@ -191,7 +191,7 @@
       <section class="hero">
         <div class="container">
           <div class="hero__inner" style="background-image: url(./images/hero-bg.png);">
-            <div class="hero__contant">
+            <div class="hero__content">
 
               <h2 class="hero__title">
                 Доставка
@@ -1328,13 +1328,10 @@
               <h3 class="sr-only">Форма для оформления имейл рассылки</h3>
               <form class="contacts-info__form" action="#" name="form">
 
-                <label for="get-email">
+                <label for="get-email"><span class="sr-only">Поле для ввода ващего имейла</span></label>
 
-                  <span class="sr-only">Поле для ввода ващего имейла</span>
-                  <input class="contacts-info__input" id="get-email" type="email" placeholder="Ваш email" name="femail"
-                    required="required">
-
-                </label>
+                <input class="contacts-info__input" id="get-email" type="email" placeholder="Ваш email" name="femail"
+                  required="required">
 
                 <button class="button contacts-info__button" type="submit">
                   <svg class="contacts-info__icon">
