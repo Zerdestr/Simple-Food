@@ -16,10 +16,10 @@ $(function () {
       $('body').toggleClass('no-scroll');
       $('.mobile-menu').toggleClass('mobile-menu--active');
     })
-    .on('click', '.mobile-menu__burger', function () { 
+    .on('click', '.mobile-menu__burger', function () {
       $('.menu__burger').trigger('click');
-     })
-
+    })
+    
 
   let reviewsSwiper = new Swiper('.reviews-swiper', {
 

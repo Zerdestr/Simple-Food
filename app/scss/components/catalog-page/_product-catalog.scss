@@ -1,0 +1,106 @@
+.breadcrumbs {
+  padding: 188px 0 24px 0;
+  margin-bottom: 60px;
+  max-width: 100%;
+  background-color: rgba($color: $orange-900, $alpha: 0.1);
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 5px;
+    padding-right: 12px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 10px;
+      background-image: url("../images/sprite.svg#chevron");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 1.2;
+    display: block;
+  }
+}
+
+.product-catalog {
+  margin-bottom: 120px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  &__title {
+    margin-right: auto;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__sorting {
+    max-width: 270px;
+  }
+
+  &__products-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    margin-bottom: 60px;
+  }
+
+  &__pagination-list {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.product-sorting {
+  margin-right: 30px;
+
+  &__box {
+    background-color: $white;
+    border: 1px solid $silver-200;
+    border-radius: 5px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    padding: 15px;
+    border-bottom: 1px solid $silver-200;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  &__list {
+    padding: 25px 15px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+}
