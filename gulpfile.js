@@ -51,6 +51,8 @@ function svgSprites() {
 
 function styles() {
   return src([
+    'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
+    'node_modules/ion-rangeslider/css/ion.rangeSlider.min.css',
     'node_modules/swiper/swiper-bundle.css',
     'app/scss/style.scss'])
     .pipe(scss({ outputStyle: 'compressed' }))
@@ -67,6 +69,8 @@ function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/swiper/swiper-bundle.min.js',
+    'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js',
+    'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))

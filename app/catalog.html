@@ -28,22 +28,24 @@
 
     <nav class="header__menu menu">
 
-      <a class="header__logo logo" href="#">
+      <a class="header__logo logo" href="index.html">
         <img class="logo__image" src="images/logo.svg" alt="Изображение логотипа сайта" width="200" height="39">
       </a>
 
       <ul class="menu__list header-nav">
 
-        <li class="menu__item">
-          <a class="menu__link menu__link--active" href="index.html">Главная</a>
+        <li class="menu__item ">
+          <a class="link-effects menu__link "
+            href="index.html">Главная</a>
         </li>
 
         <li class="menu__item">
-          <a class="menu__link" href="catalog.html">Блюда</a>
+          <a class="link-effects menu__link menu__link--active"
+            href="catalog.html">Блюда</a>
         </li>
 
         <li class="menu__item">
-          <a class="menu__link" href="#">Контакты</a>
+          <a class="link-effects menu__link " href="#">Контакты</a>
         </li>
 
       </ul>
@@ -99,11 +101,13 @@
   <ul class="menu__list mobile-nav">
 
     <li class="menu__item mobile-nav__item">
-      <a class="menu__link menu__link--active mobile-nav__link" href="#">Главная</a>
+      <a class="menu__link  mobile-nav__link"
+        href="index.html">Главная</a>
     </li>
 
     <li class="menu__item mobile-nav__item">
-      <a class="menu__link mobile-nav__link" href="#">Блюда</a>
+      <a class="menu__link menu__link menu__link--active mobile-nav__link"
+        href="catalog.html">Блюда</a>
     </li>
 
     <li class="menu__item mobile-nav__item">
@@ -208,14 +212,14 @@
 
       <h2 class="title product-catalog__title">Каталог продуктов</h2>
 
-      <select name="" id="">
+      <select class="product-catalog__filter" name="" id="">
         <option value="">По названию</option>
         <option value="">2</option>
         <option value="">3</option>
         <option value="">4</option>
       </select>
 
-      <select name="" id="">
+      <select class="product-catalog__filter" name="" id="">
         <option value="">по 12</option>
         <option value="">2</option>
         <option value="">3</option>
@@ -233,29 +237,37 @@
           <h3 class="product-sorting__title">Категории</h3>
 
           <ul class="product-sorting__list">
+
             <li class="product-sorting__item">
-              <a class="product-sorting__link" href="#">Бургеры</a>
+              <a class="link-effects product-sorting__link menu__link" href="#">Бургеры</a>
             </li>
+
             <li class="product-sorting__item">
-              <a class="product-sorting__link" href="#">Пицца</a>
+              <a class="link-effects product-sorting__link" href="#">Пицца</a>
             </li>
+
             <li class="product-sorting__item">
-              <a class="product-sorting__link" href="#">Сендвичи</a>
+              <a class="link-effects product-sorting__link" href="#">Сендвичи</a>
             </li>
+
             <li class="product-sorting__item">
-              <a class="product-sorting__link" href="#">Азиатская кухня</a>
+              <a class="link-effects product-sorting__link" href="#">Азиатская кухня</a>
             </li>
+
             <li class="product-sorting__item">
-              <a class="product-sorting__link" href="#">Сеты</a>
+              <a class="link-effects product-sorting__link" href="#">Сеты</a>
             </li>
+
             <li class="product-sorting__item">
-              <a class="product-sorting__link" href="#">Европейская кухня</a>
+              <a class="link-effects product-sorting__link" href="#">Европейская кухня</a>
             </li>
+
             <li class="product-sorting__item">
-              <a class="product-sorting__link" href="#">Напитки</a>
+              <a class="link-effects product-sorting__link" href="#">Напитки</a>
             </li>
+
             <li class="product-sorting__item">
-              <a class="product-sorting__link" href="#">Алкоголь</a>
+              <a class="link-effects product-sorting__link" href="#">Алкоголь</a>
             </li>
           </ul>
 
@@ -265,16 +277,40 @@
 
           <h3 class="product-sorting__title">Предложения</h3>
 
-          <form action="">
+          <form class="product-sorting__offers offers" action="">
 
-            <label for="">Со скидкой</label>
-            <input type="checkbox">
+            <label class="offers__item" for="discount">
+              <div class="offers__box">
 
-            <label for="">Новинка</label>
-            <input type="checkbox">
+                <input class="offers__input" id="discount" type="checkbox">
+                <span class="offers__checkbox"></span>
 
-            <label for="">Хит</label>
-            <input type="checkbox">
+              </div>
+              <span class="offers__text">Со скидкой</span>
+            </label>
+
+            <label class="offers__item">
+
+              <div class="offers__box">
+                <input class="offers__input" type="checkbox">
+                <span class="offers__checkbox"></span>
+              </div>
+
+              <span class="offers__text">Новинка</span>
+            </label>
+            
+
+            <label class="offers__item">
+
+              <div class="offers__box">
+
+                <input class="offers__input" type="checkbox">
+                <span class="offers__checkbox"></span>
+
+              </div>
+
+              <span class="offers__text">Хит</span>
+            </label>
 
           </form>
 
@@ -284,10 +320,37 @@
 
           <h3 class="product-sorting__title">Цена</h3>
 
-          <form action="">
+          <form class="product-sorting__price price-range" name="f_price" action="#">
 
-            <label for=""></label>
-            <input type="text">
+            <label class="price-range__numbers">
+
+              <div class="price-range__item price-range__item--from">
+
+                <span>от</span>
+
+                <input type="text" class="price-range__input price-range__input--from" value="0" />
+
+                <span>₴</span>
+
+              </div>
+
+              <div class="price-range__item">
+
+                <span>до</span>
+
+                <input type="text" class="price-range__input price-range__input--to" value="0" id="price-range"
+                  data-min="0" data-max="1200" data-from="100" data-to="1000" />
+
+                <span>₴</span>
+
+              </div>
+
+            </label>
+
+
+
+            <label for="price-range-slider"></label>
+            <input type="text" class="price-range__slider" value="" />
 
           </form>
 
@@ -557,7 +620,7 @@
 
         <div class="contacts-info__wrapper">
 
-          <a class="contacts-info__logo logo" href="#">
+          <a class="contacts-info__logo logo" href="index.html">
             <img class="logo__image" src="images/logo.svg" alt="Изображение логотипа сайта" width="200" height="39">
           </a>
 
@@ -583,40 +646,40 @@
 
         <ul class="contacts-info__info">
           <li class="contacts-info__item">
-            <a href="" class="contacts-info__link">Как это работает</a>
+            <a class="link-effects contacts-info__link" href="#">Как это работает</a>
           </li>
           <li class="contacts-info__item">
-            <a href="" class="contacts-info__link">Продукты</a>
+            <a class="link-effects contacts-info__link" href="#">Продукты</a>
           </li>
           <li class="contacts-info__item">
-            <a href="" class="contacts-info__link">Блюда</a>
+            <a class="link-effects contacts-info__link" href="catalog.html">Блюда</a>
           </li>
           <li class="contacts-info__item">
-            <a href="" class="contacts-info__link">Меню</a>
+            <a class="link-effects contacts-info__link" href="#">Меню</a>
           </li>
           <li class="contacts-info__item">
-            <a href="" class="contacts-info__link">О нас</a>
+            <a class="link-effects contacts-info__link" href="#">О нас</a>
           </li>
           <li class="contacts-info__item">
-            <a href="" class="contacts-info__link">Новости</a>
+            <a class="link-effects contacts-info__link" href="#">Новости</a>
           </li>
           <li class="contacts-info__item">
-            <a href="" class="contacts-info__link">Партнеры</a>
+            <a class="link-effects contacts-info__link" href="#">Партнеры</a>
           </li>
           <li class="contacts-info__item">
-            <a href="" class="contacts-info__link">ЧаВо</a>
+            <a class="link-effects contacts-info__link" href="#">ЧаВо</a>
           </li>
           <li class="contacts-info__item">
-            <a href="" class="contacts-info__link">Скачать приложение</a>
+            <a class="link-effects contacts-info__link" href="#">Скачать приложение</a>
           </li>
           <li class="contacts-info__item">
-            <a href="" class="contacts-info__link">Блог</a>
+            <a class="link-effects contacts-info__link" href="#">Блог</a>
           </li>
           <li class="contacts-info__item">
-            <a href="" class="contacts-info__link">Что нового?</a>
+            <a class="link-effects contacts-info__link" href="#">Что нового?</a>
           </li>
           <li class="contacts-info__item">
-            <a href="" class="contacts-info__link">Карта сайта</a>
+            <a class="link-effects contacts-info__link" href="#">Карта сайта</a>
           </li>
         </ul>
 
@@ -627,7 +690,7 @@
           <ul class="contacts__info">
 
             <li class="contacts__item">
-              <a class="contacts__link" href="#">
+              <a class="link-effects contacts__link" href="#">
 
                 <svg class="contacts__icon">
                   <use xlink:href="images/sprite.svg#icon-location"></use>
@@ -639,7 +702,7 @@
             </li>
 
             <li class="contacts__item">
-              <a class="contacts__link" href="tel:+380501112233">
+              <a class="link-effects contacts__link" href="tel:+380501112233">
 
                 <svg class="contacts__icon">
                   <use xlink:href="images/sprite.svg#icon-calling"></use>
@@ -651,7 +714,7 @@
             </li>
 
             <li class="contacts__item">
-              <a class="contacts__link" href="mailto:support@sfood.com">
+              <a class="link-effects contacts__link" href="mailto:support@sfood.com">
                 <svg class="contacts__icon">
                   <use xlink:href="images/sprite.svg#icon-message"></use>
                 </svg>

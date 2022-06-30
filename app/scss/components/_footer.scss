@@ -113,20 +113,6 @@
     @include mq("tablet") {
       display: block;
     }
-
-    &:focus {
-      outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
-    }
-
-    &:hover {
-      color: $orange-900;
-    }
-
-    &:active {
-      color: $dark;
-      text-shadow: 2px 2px 5px rgba($color: $dark, $alpha: 0.5);
-      outline: transparent;
-    }
   }
 
   &__address {

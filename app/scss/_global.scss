@@ -143,6 +143,23 @@ body {
   }
 }
 
+.link-effects {
+  &:focus {
+    outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+    border-radius: 5px;
+  }
+
+  &:hover {
+    color: $orange-900;
+  }
+
+  &:active {
+    color: $dark;
+    text-shadow: 2px 2px 5px rgba($color: $dark, $alpha: 0.5);
+    outline: transparent;
+  }
+}
+
 .product-card {
   display: flex;
   flex-direction: column;
@@ -307,8 +324,6 @@ body {
   }
 }
 
-
-
 .menu {
   display: flex;
   justify-content: space-between;
@@ -338,25 +353,8 @@ body {
     &--active {
       color: $orange-900;
     }
-
-    &:focus {
-      outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
-      border-radius: 5px;
-    }
-
-    &:hover {
-      color: $orange-900;
-    }
-
-    &:active {
-      color: $dark;
-      text-shadow: 2px 2px 5px rgba($color: $dark, $alpha: 0.5);
-      outline: transparent;
-    }
   }
 }
-
-
 
 .burger {
   display: none;
@@ -480,7 +478,6 @@ body {
   }
 }
 
-
 .contacts {
   @include mq("tablet") {
     margin-bottom: 30px;
@@ -509,15 +506,11 @@ body {
     line-height: 2;
     background-repeat: no-repeat;
     background-position: center left;
+    border-radius: 5px;
     transition: color 0.3s ease-in-out;
 
-    &:focus {
-      border-radius: 5px;
-      outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
-    }
 
     &:hover {
-      color: $orange-900;
 
       .contacts__icon {
         color: $orange-900;
@@ -525,9 +518,6 @@ body {
     }
 
     &:active {
-      color: $dark;
-      text-shadow: 2px 2px 5px rgba($color: $dark, $alpha: 0.5);
-      outline: transparent;
 
       .contacts__icon {
         color: $dark;

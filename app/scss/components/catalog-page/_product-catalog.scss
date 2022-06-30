@@ -42,8 +42,33 @@
     justify-content: space-between;
     margin-bottom: 60px;
   }
+
   &__title {
     margin-right: auto;
+  }
+
+  &__filter {
+    padding: 15px;
+    background-color: $white;
+    border: 1px solid $silver-200;
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  .jq-selectbox__select {
+    display: flex;
+  }
+
+  .jq-selectbox__select-text {
+    margin-right: 15px;
+  }
+
+  .jq-selectbox__trigger-arrow {
+    background-color: darkblue;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    top: 0;
   }
 
   &__content {
@@ -102,5 +127,145 @@
   &__link {
     font-size: 18px;
     line-height: 1.3;
+    transition: color 0.3s ease-in-out;
   }
+}
+
+.offers {
+  padding: 25px 15px;
+  font-size: 16px;
+
+  :not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      .offers__checkbox {
+        border-color: $orange-900;
+      }
+    }
+
+    &:focus {
+      .offers__checkbox {
+        outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+        border-radius: 3px;
+      }
+    }
+  }
+
+  &__input {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+
+    &:checked + .offers__checkbox {
+      background-image: url("../images/checkbox.svg");
+      border: 1px solid $darkBlue-900;
+    }
+  }
+
+  &__checkbox {
+    width: 24px;
+    height: 24px;
+    background-color: $orange-bg;
+    border-radius: 3px;
+    border: 1px solid $silver-200;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  &__text {
+    padding-left: 36px;
+  }
+}
+
+.price-range {
+  padding: 25px 15px 38px;
+  font-size: 16px;
+
+  &__numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: $gray;
+
+    &--from {
+      margin-right: 20px;
+    }
+  }
+
+  &__input {
+    width: 70px;
+    height: 40px;
+    margin: 0 5px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1;
+    background-color: $orange-bg;
+    border-radius: 3px;
+
+    &:focus {
+      outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+      border-radius: 3px;
+    }
+  }
+
+  .irs {
+    height: 0;
+  }
+
+  .irs-line {
+    height: 2px;
+    background-color: $gray;
+    top: 8px;
+  }
+
+  .irs-bar {
+    height: 2px;
+    background-color: $orange-900;
+    top: 8px;
+  }
+
+  .irs-handle {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    background-color: $orange-900;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    top: 0;
+
+    &:hover {
+      background-color: $orange-bg;
+      border-color: $orange-900;
+    }
+    &:active {
+      background-color: $orange-bg;
+      border-color: $orange-900;
+    }
+  }
+}
+
+.irs-from,
+.irs-to,
+.irs-min,
+.irs-max,
+.irs-single {
+  display: none;
 }

@@ -19,7 +19,9 @@ $(function () {
     .on('click', '.mobile-menu__burger', function () {
       $('.menu__burger').trigger('click');
     })
-    
+
+  $('.product-catalog__filter').styler();
+
 
   let reviewsSwiper = new Swiper('.reviews-swiper', {
 
@@ -96,6 +98,66 @@ $(function () {
 
       catalogSliderDestroy()
     }
+  });
+
+  var $range = $(".price-range__slider"),
+    $inputFrom = $(".price-range__input--from"),
+    $inputTo = $(".price-range__input--to"),
+    priceRange = document.getElementById('price-range'),
+    instance,
+    min = priceRange.dataset.min,
+    max = priceRange.dataset.max,
+    from = priceRange.dataset.from,
+    to = priceRange.dataset.to;
+
+  $range.ionRangeSlider({
+    skin: "round",
+    type: "double",
+    min: min,
+    max: max,
+    from: from,
+    to: to,
+    onStart: updateInputs,
+    onChange: updateInputs
+  });
+  instance = $range.data("ionRangeSlider");
+
+  function updateInputs(data) {
+    from = data.from;
+    to = data.to;
+
+    $inputFrom.prop("value", from);
+    $inputTo.prop("value", to);
+  }
+
+  $inputFrom.on("input", function () {
+    var val = $(this).prop("value");
+
+
+    if (val < min) {
+      val = min;
+    } else if (val > to) {
+      val = to;
+    }
+
+    instance.update({
+      from: val
+    });
+  });
+
+  $inputTo.on("input", function () {
+    var val = $(this).prop("value");
+
+
+    if (val < from) {
+      val = from;
+    } else if (val > max) {
+      val = max;
+    }
+
+    instance.update({
+      to: val
+    });
   });
 
 });

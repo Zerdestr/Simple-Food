@@ -3,22 +3,24 @@
 
     <nav class="header__menu menu">
 
-      <a class="header__logo logo" href="#">
+      <a class="header__logo logo" href="index.html">
         <img class="logo__image" src="images/logo.svg" alt="Изображение логотипа сайта" width="200" height="39">
       </a>
 
       <ul class="menu__list header-nav">
 
-        <li class="menu__item">
-          <a class="menu__link menu__link--active" href="index.html">Главная</a>
+        <li class="menu__item ">
+          <a class="link-effects menu__link @if (context.page === 'home') {menu__link--active}"
+            href="index.html">Главная</a>
         </li>
 
         <li class="menu__item">
-          <a class="menu__link" href="catalog.html">Блюда</a>
+          <a class="link-effects menu__link @if (context.page === 'catalog') {menu__link--active}"
+            href="catalog.html">Блюда</a>
         </li>
 
         <li class="menu__item">
-          <a class="menu__link" href="#">Контакты</a>
+          <a class="link-effects menu__link @if (context.page === 'contact') {menu__link--active}" href="#">Контакты</a>
         </li>
 
       </ul>
@@ -74,11 +76,13 @@
   <ul class="menu__list mobile-nav">
 
     <li class="menu__item mobile-nav__item">
-      <a class="menu__link menu__link--active mobile-nav__link" href="#">Главная</a>
+      <a class="menu__link @if (context.page === 'home') {menu__link--active} mobile-nav__link"
+        href="index.html">Главная</a>
     </li>
 
     <li class="menu__item mobile-nav__item">
-      <a class="menu__link mobile-nav__link" href="#">Блюда</a>
+      <a class="menu__link menu__link @if (context.page === 'catalog') {menu__link--active} mobile-nav__link"
+        href="catalog.html">Блюда</a>
     </li>
 
     <li class="menu__item mobile-nav__item">
