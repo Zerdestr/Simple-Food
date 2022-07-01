@@ -1,23 +1,23 @@
-<div class="breadcrumbs">
-  <div class="container">
-    <ul class="breadcrumbs__list">
-      <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="index.html">Главная</a>
-      </li>
-      <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="#">Каталог товаров</a>
-      </li>
-    </ul>
-  </div>
-</div>
-
 <section class="product-catalog">
+
+  <div class="breadcrumbs">
+    <div class="container">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="index.html">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Каталог товаров</a>
+        </li>
+      </ul>
+    </div>
+  </div>
   <div class="container">
     <div class="product-catalog__top">
 
       <h2 class="title product-catalog__title">Каталог продуктов</h2>
 
-      <select class="product-catalog__filter" name="" id="">
+      <select class="product-catalog__filter product-catalog__filter--name" name="" id="">
         <option value="">По названию</option>
         <option value="">2</option>
         <option value="">3</option>
@@ -103,7 +103,7 @@
 
               <span class="offers__text">Новинка</span>
             </label>
-            
+
 
             <label class="offers__item">
 
@@ -143,8 +143,7 @@
 
                 <span>до</span>
 
-                <input type="text" class="price-range__input price-range__input--to" value="0" id="price-range"
-                  data-min="0" data-max="1200" data-from="100" data-to="1000" />
+                <input type="text" class="price-range__input price-range__input--to" value="0" />
 
                 <span>₴</span>
 
@@ -154,7 +153,8 @@
 
 
 
-            <label for="price-range-slider"></label>
+            <label for="price-range-slider" id="price-range" data-min="0" data-max="1200" data-from="100"
+              data-to="1000"></label>
             <input type="text" class="price-range__slider" value="" />
 
           </form>
@@ -163,12 +163,12 @@
 
       </div>
 
-      <div class="product-catalog__products">
+      <div class="product-catalog__products products">
 
-        <ul class="product-catalog__products-list">
+        <ul class="products__products-list">
 
-          <li class="categories__item">
-            <article class="categories__product product-card">
+          <li class="products__item">
+            <article class="products__product product-card">
               <a class="product-card__link" href="#">
                 <img class="product-card__image" src="./images/categories-item-1.png" alt="Фото товара" width="140"
                   height="140">
@@ -181,8 +181,8 @@
             </article>
           </li>
 
-          <li class="categories__item">
-            <article class="categories__product product-card">
+          <li class="products__item">
+            <article class="products__product product-card">
               <a class="product-card__link" href="#">
                 <img class="product-card__image" src="./images/categories-item-2.png" alt="Фото товара" width="140"
                   height="140">
@@ -195,8 +195,8 @@
             </article>
           </li>
 
-          <li class="categories__item">
-            <article class="categories__product product-card">
+          <li class="products__item">
+            <article class="products__product product-card">
               <a class="product-card__link" href="#">
                 <img class="product-card__image" src="./images/categories-item-3.png" alt="Фото товара" width="140"
                   height="140">
@@ -209,8 +209,8 @@
             </article>
           </li>
 
-          <li class="categories__item">
-            <article class="categories__product product-card">
+          <li class="products__item">
+            <article class="products__product product-card">
               <a class="product-card__link" href="#">
                 <img class="product-card__image" src="./images/categories-item-4.png" alt="Фото товара" width="140"
                   height="140">
@@ -223,8 +223,8 @@
             </article>
           </li>
 
-          <li class="categories__item">
-            <article class="categories__product product-card">
+          <li class="products__item">
+            <article class="products__product product-card">
               <a class="product-card__link" href="#">
                 <img class="product-card__image" src="./images/categories-item-5.png" alt="Фото товара" width="140"
                   height="140">
@@ -237,8 +237,8 @@
             </article>
           </li>
 
-          <li class="categories__item">
-            <article class="categories__product product-card">
+          <li class="products__item">
+            <article class="products__product product-card">
               <a class="product-card__link" href="#">
                 <img class="product-card__image" src="./images/categories-item-1.png" alt="Фото товара" width="140"
                   height="140">
@@ -251,8 +251,50 @@
             </article>
           </li>
 
-          <li class="categories__item">
-            <article class="categories__product product-card">
+          <li class="products__item">
+            <article class="products__product product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__image" src="./images/categories-item-1.png" alt="Фото товара" width="140"
+                  height="140">
+                <h3 class="product-card__text">
+                  Чизбургер с листьями салата
+                </h3>
+              </a>
+              <span class="product-card__price">160 <span class="product__currency">грн.</span></span>
+              <button class="button product-card__add" type="button">В корзину</button>
+            </article>
+          </li>
+
+          <li class="products__item">
+            <article class="products__product product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__image" src="./images/categories-item-1.png" alt="Фото товара" width="140"
+                  height="140">
+                <h3 class="product-card__text">
+                  Чизбургер с листьями салата
+                </h3>
+              </a>
+              <span class="product-card__price">160 <span class="product__currency">грн.</span></span>
+              <button class="button product-card__add" type="button">В корзину</button>
+            </article>
+          </li>
+
+          <li class="products__item">
+            <article class="products__product product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__image" src="./images/categories-item-1.png" alt="Фото товара" width="140"
+                  height="140">
+                <h3 class="product-card__text">
+                  Чизбургер с листьями салата
+                </h3>
+              </a>
+              <span class="product-card__price">160 <span class="product__currency">грн.</span></span>
+              <button class="button product-card__add" type="button">В корзину</button>
+            </article>
+          </li>
+
+          <li class="products__item">
+            <article class="products__product product-card">
               <a class="product-card__link" href="#">
                 <img class="product-card__image" src="./images/categories-item-2.png" alt="Фото товара" width="140"
                   height="140">
@@ -265,8 +307,8 @@
             </article>
           </li>
 
-          <li class="categories__item">
-            <article class="categories__product product-card">
+          <li class="products__item">
+            <article class="products__product product-card">
               <a class="product-card__link" href="#">
                 <img class="product-card__image" src="./images/categories-item-3.png" alt="Фото товара" width="140"
                   height="140">
@@ -279,93 +321,64 @@
             </article>
           </li>
 
-          <li class="categories__item">
-            <article class="categories__product product-card">
+          <li class="products__item">
+            <article class="products__product product-card">
               <a class="product-card__link" href="#">
-                <img class="product-card__image" src="./images/categories-item-4.png" alt="Фото товара" width="140"
+                <img class="product-card__image" src="./images/categories-item-2.png" alt="Фото товара" width="140"
                   height="140">
                 <h3 class="product-card__text">
-                  Черный гамбургер
+                  Бифбургер
                 </h3>
               </a>
-              <span class="product-card__price">199 <span class="product__currency">грн.</span></span>
+              <span class="product-card__price">140 <span class="product__currency">грн.</span></span>
               <button class="button product-card__add" type="button">В корзину</button>
             </article>
           </li>
 
-          <li class="categories__item">
-            <article class="categories__product product-card">
-              <a class="product-card__link" href="#">
-                <img class="product-card__image" src="./images/categories-item-5.png" alt="Фото товара" width="140"
-                  height="140">
-                <h3 class="product-card__text">
-                  Чикен бургер
-                </h3>
-              </a>
-              <span class="product-card__price">180 <span class="product__currency">грн.</span></span>
-              <button class="button product-card__add" type="button">В корзину</button>
-            </article>
-          </li>
-
-          <li class="categories__item">
-            <article class="categories__product product-card">
-              <a class="product-card__link" href="#">
-                <img class="product-card__image" src="./images/categories-item-4.png" alt="Фото товара" width="140"
-                  height="140">
-                <h3 class="product-card__text">
-                  Черный гамбургер
-                </h3>
-              </a>
-              <span class="product-card__price">199 <span class="product__currency">грн.</span></span>
-              <button class="button product-card__add" type="button">В корзину</button>
-            </article>
-          </li>
-
-          <li class="categories__item">
-            <article class="categories__product product-card">
-              <a class="product-card__link" href="#">
-                <img class="product-card__image" src="./images/categories-item-5.png" alt="Фото товара" width="140"
-                  height="140">
-                <h3 class="product-card__text">
-                  Чикен бургер
-                </h3>
-              </a>
-              <span class="product-card__price">180 <span class="product__currency">грн.</span></span>
-              <button class="button product-card__add" type="button">В корзину</button>
-            </article>
-          </li>
 
         </ul>
 
-        <div class="product-catalog__pagination">
+        <div class="products__pagination">
 
-          <a class="product-catalog__pagination-arrows" href="#"></a>
+          <ul class="products__pagination-list">
 
-          <ul class="product-catalog__pagination-list">
-
-            <li class="product-catalog__pagination-item">
-              <a class="product-catalog__pagination-link" href="#">1</a>
+            <li class="products__pagination-item">
+              <a class="products__pagination-link products-pagination-prew" href="#">
+                <svg class="products__pagination-icon">
+                  <use xlink:href="images/sprite.svg#icon-product-catalog-prev"></use>
+                </svg>
+              </a>
             </li>
 
-            <li class="product-catalog__pagination-item">
-              <a class="product-catalog__pagination-link" href="#">2</a>
+            <li class="products__pagination-item">
+              <a class="products__pagination-link products__pagination-link--activ" href="#">1</a>
             </li>
 
-            <li class="product-catalog__pagination-item">
-              <a class="product-catalog__pagination-link" href="#">...</a>
+            <li class="products__pagination-item">
+              <a class="products__pagination-link" href="#">2</a>
             </li>
 
-            <li class="product-catalog__pagination-item">
-              <a class="product-catalog__pagination-link" href="#">9</a>
+            <li class="products__pagination-item">
+              <a class="products__pagination-link" href="#">...</a>
             </li>
 
-            <li class="product-catalog__pagination-item">
-              <a class="product-catalog__pagination-link" href="#">10</a>
+            <li class="products__pagination-item">
+              <a class="products__pagination-link" href="#">9</a>
+            </li>
+
+            <li class="products__pagination-item">
+              <a class="products__pagination-link" href="#">10</a>
+            </li>
+
+            <li class="products__pagination-item">
+              <a class="products__pagination-link products-pagination-next" href="#">
+                <svg class="products__pagination-icon">
+                  <use xlink:href="images/sprite.svg#icon-product-catalog-next"></use>
+                </svg>
+              </a>
             </li>
 
           </ul>
-
-          <a class="product-catalog__pagination-arrows" href="#"></a>
 
         </div>
 
@@ -373,5 +386,126 @@
 
     </div>
 
+  </div>
+</section>
+
+<section class="discounts">
+  <div class="container">
+    <div class="title discounts__title">Акции и скидки</div>
+
+    <div class="discounts__swiper restaurants-swiper swiper">
+
+      <div class="restaurants-swiper__wrapper swiper-wrapper">
+        <div class="restaurants-swiper__slide restaurants-slide swiper-slide">
+          <article class="restaurant__card restaurant-card">
+
+            <a class="discounts-card__link" href="#">
+
+              <img class="restaurant-card__image" src="./images/restaurants-image-1.png" alt="Фото ресторанного блюда"
+                width="370" height="300">
+
+              <h3 class="restaurant-card__name discounts-card__title">Скидка 50% на вторую пиццу</h3>
+
+            </a>
+
+          </article>
+
+        </div>
+
+        <div class="restaurants-swiper__slide restaurants-slide swiper-slide">
+          <article class="restaurant__card restaurant-card">
+
+            <a class="discounts-card__link" href="#">
+
+              <img class="restaurant-card__image" src="./images/restaurants-image-5.png" alt="Фото ресторанного блюда"
+                width="370" height="300">
+
+              <h3 class="restaurant-card__name discounts-card__title">Картошечка из KFC даром при заказе бургера</h3>
+
+            </a>
+
+          </article>
+        </div>
+
+        <div class="restaurants-swiper__slide restaurants-slide swiper-slide">
+          <article class="restaurant__card restaurant-card">
+
+            <a class="discounts-card__link" href="#">
+
+              <img class="restaurant-card__image" src="./images/restaurants-image-6.png" alt="Фото ресторанного блюда"
+                width="370" height="300">
+
+              <h3 class="restaurant-card__name discounts-card__title">Чёрные бургеры на чёрный день</h3>
+
+            </a>
+
+          </article>
+        </div>
+
+
+      </div>
+
+      <div class="swipers__pagination"></div>
+
+    </div>
+
+    <!-- <div class="discounts__swiper discounts-swiper swiper">
+
+      <div class="discounts-swiper__wrapper swiper-wrapper">
+
+        <div class="discounts-swipe__slide swiper-slide">
+
+          <article class="restaurant-card discounts-card">
+
+            <a class="discounts-card__link" href="#">
+
+              <img class="restaurant-card__image" src="./images/restaurants-image-1.png" alt="Фото ресторанного блюда"
+                width="370" height="300">
+
+              <h3 class="restaurant-card__name discounts-card__title">Скидка 50% на вторую пиццу</h3>
+
+            </a>
+
+          </article>
+
+        </div>
+
+        <div class="discounts-swipe__slide swiper-slide">
+
+          <article class="restaurant-card discounts-card">
+
+            <a class="discounts-card__link" href="#">
+
+              <img class="restaurant-card__image" src="./images/restaurants-image-5.png" alt="Фото ресторанного блюда"
+                width="370" height="300">
+
+              <h3 class="restaurant-card__name discounts-card__title">Картошечка из KFC даром при заказе бургера</h3>
+
+            </a>
+
+          </article>
+        </div>
+
+        <div class="discounts-swipe__slide swiper-slide">
+
+          <article class="restaurant-card discounts-card">
+
+            <a class="discounts-card__link" href="#">
+
+              <img class="restaurant-card__image" src="./images/restaurants-image-6.png" alt="Фото ресторанного блюда"
+                width="370" height="300">
+
+              <h3 class="restaurant-card__name discounts-card__title">Чёрные бургеры на чёрный день</h3>
+
+            </a>
+
+          </article>
+        </div>
+
+      </div>
+
+      <div class="swipers__pagination"></div>
+
+    </div> -->
   </div>
 </section>

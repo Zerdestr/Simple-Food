@@ -12,10 +12,12 @@ $(function () {
         $("#" + tabId).addClass("categories__items--active");
       }
     })
+
     .on('click', '.menu__burger', function () {
       $('body').toggleClass('no-scroll');
       $('.mobile-menu').toggleClass('mobile-menu--active');
     })
+
     .on('click', '.mobile-menu__burger', function () {
       $('.menu__burger').trigger('click');
     })
@@ -50,12 +52,12 @@ $(function () {
     }
   });
 
-  let catalogSlider = null;
+  let restaurantsSlider = null;
   let mediaQuerySize = 992;
 
-  function catalogSliderInit() {
-    if (!catalogSlider) {
-      catalogSlider = new Swiper('.restaurants-swiper', {
+  function restaurantsSliderInit() {
+    if (!restaurantsSlider) {
+      restaurantsSlider = new Swiper('.restaurants-swiper', {
 
         autoplay: {
           delay: 5000,
@@ -79,10 +81,11 @@ $(function () {
     }
   }
 
-  function catalogSliderDestroy() {
-    if (catalogSlider) {
-      catalogSlider.destroy();
-      catalogSlider = null;
+
+  function restaurantsSliderDestroy() {
+    if (restaurantsSlider) {
+      restaurantsSlider.destroy();
+      restaurantsSlider = null;
     }
   }
 
@@ -93,12 +96,13 @@ $(function () {
 
     if (windowWidth <= mediaQuerySize) {
 
-      catalogSliderInit()
+      restaurantsSliderInit()
     } else {
 
-      catalogSliderDestroy()
+      restaurantsSliderDestroy()
     }
   });
+
 
   var $range = $(".price-range__slider"),
     $inputFrom = $(".price-range__input--from"),
@@ -118,7 +122,8 @@ $(function () {
     from: from,
     to: to,
     onStart: updateInputs,
-    onChange: updateInputs
+    onChange: updateInputs,
+    onFinish: updateInputs
   });
   instance = $range.data("ionRangeSlider");
 
@@ -130,10 +135,10 @@ $(function () {
     $inputTo.prop("value", to);
   }
 
-  $inputFrom.on("input", function () {
+  $inputFrom.on("change", function () {
     var val = $(this).prop("value");
 
-
+    // validate
     if (val < min) {
       val = min;
     } else if (val > to) {
@@ -143,12 +148,15 @@ $(function () {
     instance.update({
       from: val
     });
+
+    $(this).prop("value", val);
+
   });
 
-  $inputTo.on("input", function () {
+  $inputTo.on("change", function () {
     var val = $(this).prop("value");
 
-
+    // validate
     if (val < from) {
       val = from;
     } else if (val > max) {
@@ -158,6 +166,8 @@ $(function () {
     instance.update({
       to: val
     });
+
+    $(this).prop("value", val);
   });
 
 });
