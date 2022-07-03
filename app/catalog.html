@@ -82,6 +82,7 @@
 
   </div>
 </header>
+
 <nav class="mobile-menu">
 
   <div class="container">
@@ -193,38 +194,191 @@
 
   <main class="main">
 
-    <section class="product-catalog">
+    <nav class="mobile-menu mobile-menu-sorting">
 
-  <div class="breadcrumbs">
-    <div class="container">
-      <ul class="breadcrumbs__list">
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="index.html">Главная</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">Каталог товаров</a>
-        </li>
-      </ul>
-    </div>
-  </div>
   <div class="container">
+
+    <div class="product-catalog__sorting product-sorting">
+
+      <button class="mobile-menu__burger burger burger--active" type="button">
+        <span class="burger__line"></span>
+        <span class="sr-only">Открыть меню</span>
+      </button>
+
+      <div class="product-sorting__box">
+
+        <h3 class="product-sorting__title">Категории</h3>
+
+        <ul class="product-sorting__list">
+
+          <li class="product-sorting__item">
+            <a class="link-effects product-sorting__link menu__link" href="#">Бургеры</a>
+          </li>
+
+          <li class="product-sorting__item">
+            <a class="link-effects product-sorting__link" href="#">Пицца</a>
+          </li>
+
+          <li class="product-sorting__item">
+            <a class="link-effects product-sorting__link" href="#">Сендвичи</a>
+          </li>
+
+          <li class="product-sorting__item">
+            <a class="link-effects product-sorting__link" href="#">Азиатская кухня</a>
+          </li>
+
+          <li class="product-sorting__item">
+            <a class="link-effects product-sorting__link" href="#">Сеты</a>
+          </li>
+
+          <li class="product-sorting__item">
+            <a class="link-effects product-sorting__link" href="#">Европейская кухня</a>
+          </li>
+
+          <li class="product-sorting__item">
+            <a class="link-effects product-sorting__link" href="#">Напитки</a>
+          </li>
+
+          <li class="product-sorting__item">
+            <a class="link-effects product-sorting__link" href="#">Алкоголь</a>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="product-sorting__box">
+
+        <h3 class="product-sorting__title">Предложения</h3>
+
+        <form class="product-sorting__offers offers" action="">
+
+          <label class="offers__item" for="discount">
+            <div class="offers__box">
+
+              <input class="offers__input" id="discount" type="checkbox">
+              <span class="offers__checkbox"></span>
+
+            </div>
+            <span class="offers__text">Со скидкой</span>
+          </label>
+
+          <label class="offers__item">
+
+            <div class="offers__box">
+              <input class="offers__input" type="checkbox">
+              <span class="offers__checkbox"></span>
+            </div>
+
+            <span class="offers__text">Новинка</span>
+          </label>
+
+
+          <label class="offers__item">
+
+            <div class="offers__box">
+
+              <input class="offers__input" type="checkbox">
+              <span class="offers__checkbox"></span>
+
+            </div>
+
+            <span class="offers__text">Хит</span>
+          </label>
+
+        </form>
+
+      </div>
+
+      <div class="product-sorting__box">
+
+        <h3 class="product-sorting__title">Цена</h3>
+
+        <form class="product-sorting__price price-range" name="f_price" action="#">
+
+          <label class="price-range__numbers">
+
+            <div class="price-range__item price-range__item--from">
+
+              <span>от</span>
+
+              <input type="text" class="price-range__input price-range__input--from" value="0" />
+
+              <span>₴</span>
+
+            </div>
+
+            <div class="price-range__item">
+
+              <span>до</span>
+
+              <input type="text" class="price-range__input price-range__input--to" value="0" />
+
+              <span>₴</span>
+
+            </div>
+
+          </label>
+
+          <label for="price-range-slider" id="price-range" data-min="0" data-max="1200" data-from="100"
+            data-to="1000"></label>
+          <input type="text" class="price-range__slider" value="" />
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</nav>
+
+<div class="breadcrumbs">
+  <div class="container">
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="#">Каталог товаров</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<section class="product-catalog">
+
+  <div class="container">
+
     <div class="product-catalog__top">
 
       <h2 class="title product-catalog__title">Каталог продуктов</h2>
 
-      <select class="product-catalog__filter product-catalog__filter--name" name="" id="">
-        <option value="">По названию</option>
-        <option value="">2</option>
-        <option value="">3</option>
-        <option value="">4</option>
-      </select>
+      <div class="product-catalog__navigation">
 
-      <select class="product-catalog__filter" name="" id="">
-        <option value="">по 12</option>
-        <option value="">2</option>
-        <option value="">3</option>
-        <option value="">4</option>
-      </select>
+        <button class="product-catalog__btn" type="button">
+          <svg class="product-catalog__icon">
+            <use xlink:href="images/sprite.svg#product-catalog-navigation-btn"></use>
+          </svg>
+        </button>
+
+        <select class="product-catalog__filter product-catalog__filter--name" name="" id="">
+          <option value="">По названию</option>
+          <option value="">2</option>
+          <option value="">3</option>
+          <option value="">4</option>
+        </select>
+
+        <select class="product-catalog__filter" name="" id="">
+          <option value="">по 12</option>
+          <option value="">2</option>
+          <option value="">3</option>
+          <option value="">4</option>
+        </select>
+
+      </div>
+
 
     </div>
 
@@ -345,8 +499,6 @@
               </div>
 
             </label>
-
-
 
             <label for="price-range-slider" id="price-range" data-min="0" data-max="1200" data-from="100"
               data-to="1000"></label>
@@ -583,128 +735,7 @@
 
   </div>
 </section>
-
-<section class="discounts">
-  <div class="container">
-    <div class="title discounts__title">Акции и скидки</div>
-
-    <div class="discounts__swiper restaurants-swiper swiper">
-
-      <div class="restaurants-swiper__wrapper swiper-wrapper">
-        <div class="restaurants-swiper__slide restaurants-slide swiper-slide">
-          <article class="restaurant__card restaurant-card">
-
-            <a class="discounts-card__link" href="#">
-
-              <img class="restaurant-card__image" src="./images/restaurants-image-1.png" alt="Фото ресторанного блюда"
-                width="370" height="300">
-
-              <h3 class="restaurant-card__name discounts-card__title">Скидка 50% на вторую пиццу</h3>
-
-            </a>
-
-          </article>
-
-        </div>
-
-        <div class="restaurants-swiper__slide restaurants-slide swiper-slide">
-          <article class="restaurant__card restaurant-card">
-
-            <a class="discounts-card__link" href="#">
-
-              <img class="restaurant-card__image" src="./images/restaurants-image-5.png" alt="Фото ресторанного блюда"
-                width="370" height="300">
-
-              <h3 class="restaurant-card__name discounts-card__title">Картошечка из KFC даром при заказе бургера</h3>
-
-            </a>
-
-          </article>
-        </div>
-
-        <div class="restaurants-swiper__slide restaurants-slide swiper-slide">
-          <article class="restaurant__card restaurant-card">
-
-            <a class="discounts-card__link" href="#">
-
-              <img class="restaurant-card__image" src="./images/restaurants-image-6.png" alt="Фото ресторанного блюда"
-                width="370" height="300">
-
-              <h3 class="restaurant-card__name discounts-card__title">Чёрные бургеры на чёрный день</h3>
-
-            </a>
-
-          </article>
-        </div>
-
-
-      </div>
-
-      <div class="swipers__pagination"></div>
-
-    </div>
-
-    <!-- <div class="discounts__swiper discounts-swiper swiper">
-
-      <div class="discounts-swiper__wrapper swiper-wrapper">
-
-        <div class="discounts-swipe__slide swiper-slide">
-
-          <article class="restaurant-card discounts-card">
-
-            <a class="discounts-card__link" href="#">
-
-              <img class="restaurant-card__image" src="./images/restaurants-image-1.png" alt="Фото ресторанного блюда"
-                width="370" height="300">
-
-              <h3 class="restaurant-card__name discounts-card__title">Скидка 50% на вторую пиццу</h3>
-
-            </a>
-
-          </article>
-
-        </div>
-
-        <div class="discounts-swipe__slide swiper-slide">
-
-          <article class="restaurant-card discounts-card">
-
-            <a class="discounts-card__link" href="#">
-
-              <img class="restaurant-card__image" src="./images/restaurants-image-5.png" alt="Фото ресторанного блюда"
-                width="370" height="300">
-
-              <h3 class="restaurant-card__name discounts-card__title">Картошечка из KFC даром при заказе бургера</h3>
-
-            </a>
-
-          </article>
-        </div>
-
-        <div class="discounts-swipe__slide swiper-slide">
-
-          <article class="restaurant-card discounts-card">
-
-            <a class="discounts-card__link" href="#">
-
-              <img class="restaurant-card__image" src="./images/restaurants-image-6.png" alt="Фото ресторанного блюда"
-                width="370" height="300">
-
-              <h3 class="restaurant-card__name discounts-card__title">Чёрные бургеры на чёрный день</h3>
-
-            </a>
-
-          </article>
-        </div>
-
-      </div>
-
-      <div class="swipers__pagination"></div>
-
-    </div> -->
-  </div>
-</section>
-
+    
     <section class="mobile">
   <div class="container">
 
@@ -739,6 +770,70 @@
         </ul>
       </div>
     </div>
+  </div>
+</section>
+    
+    <section class="discounts">
+  <div class="container">
+    <div class="title discounts__title">Акции и скидки</div>
+
+    <div class="swiper-for-mobile discounts__swiper">
+
+      <div class="swiper-for-mobile__wrapper discounts__wrapper ">
+
+        <div class="swiper-for-mobile__slide">
+          <article class="restaurant__card restaurant-card">
+
+            <a class="discounts-card__link" href="#">
+
+              <img class="restaurant-card__image" src="./images/restaurants-image-1.png" alt="Фото ресторанного блюда"
+                width="370" height="300">
+
+              <h3 class="restaurant-card__name discounts-card__title">Скидка 50% на вторую пиццу</h3>
+
+            </a>
+
+          </article>
+
+        </div>
+
+        <div class="swiper-for-mobile__slide">
+          <article class="restaurant__card restaurant-card">
+
+            <a class="discounts-card__link" href="#">
+
+              <img class="restaurant-card__image" src="./images/restaurants-image-5.png" alt="Фото ресторанного блюда"
+                width="370" height="300">
+
+              <h3 class="restaurant-card__name discounts-card__title">Картошечка из KFC даром при заказе бургера</h3>
+
+            </a>
+
+          </article>
+        </div>
+
+        <div class="swiper-for-mobile__slide">
+          <article class="restaurant__card restaurant-card">
+
+            <a class="discounts-card__link" href="#">
+
+              <img class="restaurant-card__image" src="./images/restaurants-image-6.png" alt="Фото ресторанного блюда"
+                width="370" height="300">
+
+              <h3 class="restaurant-card__name discounts-card__title">Чёрные бургеры на чёрный день</h3>
+
+            </a>
+
+          </article>
+        </div>
+
+      </div>
+
+      <div class="swipers__pagination"></div>
+
+    </div>
+
+
   </div>
 </section>
 

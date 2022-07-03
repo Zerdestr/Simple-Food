@@ -57,15 +57,15 @@ $(function () {
 
   function restaurantsSliderInit() {
     if (!restaurantsSlider) {
-      restaurantsSlider = new Swiper('.restaurants-swiper', {
+      restaurantsSlider = new Swiper('.swiper-for-mobile', {
 
         autoplay: {
           delay: 5000,
         },
 
-        wrapperClass: 'restaurants-swiper__wrapper',
+        wrapperClass: 'swiper-for-mobile__wrapper',
 
-        slideClass: 'restaurants-swiper__slide',
+        slideClass: 'swiper-for-mobile__slide',
 
         direction: 'horizontal',
         loop: true,

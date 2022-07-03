@@ -31,6 +31,27 @@
   }
 
   .reviews-swiper {
+    overflow: hidden;
+
+    &__wrapper {
+      display: flex;
+    }
+    &__slide {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 48px;
+      min-width: 100%;
+
+      @include mq("tablet") {
+        flex-direction: column;
+      }
+
+      @include mq("phone") {
+        margin-bottom: 0;
+      }
+    }
+
     &__nav {
       display: flex;
       justify-content: center;
@@ -97,19 +118,6 @@
 }
 
 .reviews-slide {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 48px;
-
-  @include mq("tablet") {
-    flex-direction: column;
-  }
-
-  @include mq("phone") {
-    margin-bottom: 0;
-  }
-
   &__photo {
     border-radius: 50%;
     align-self: flex-start;

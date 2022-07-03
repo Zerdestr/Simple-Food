@@ -1,0 +1,55 @@
+.discounts {
+  margin-bottom: 120px;
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__swiper {
+    overflow: visible;
+
+    @include mq("tablet-2") {
+      overflow: hidden;
+    }
+  }
+
+  &__wrapper {
+    margin-bottom: 45px;
+  }
+}
+
+.discounts-card {
+  padding: 0;
+
+  &__title {
+    margin-bottom: 0;
+    max-width: 330px;
+  }
+
+  &__link {
+    padding-bottom: 15px;
+  }
+}
+
+.discounts__swiper {
+  .restaurants-swiper__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+
+    @include mq("tablet-2") {
+      display: flex;
+      grid-column-gap: 0;
+    }
+  }
+  .restaurants-swiper__slide {
+    @include mq("tablet-2") {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .restaurant__card {
+    padding: 0;
+  }
+}

@@ -18,29 +18,9 @@
     }
   }
 
-  .restaurants-swiper {
-    overflow: visible;
-
-    @include mq("tablet-2") {
-      overflow: hidden;
-    }
-
-    &__slide {
-      display: flex;
-      justify-content: center;
-    }
-
-    &__wrapper {
-      box-sizing: inherit;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-row-gap: 30px;
-      grid-column-gap: 30px;
-
-      @include mq("tablet-2") {
-        display: flex;
-        grid-column-gap: 0;
-      }
-    }
+  &__wripper {
+    margin-bottom: 30px;
   }
+
+  
 }
