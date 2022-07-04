@@ -1,0 +1,19 @@
+.logo {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+
+  &:focus {
+    outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+    border-radius: 3px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+    outline: transparent;
+  }
+}

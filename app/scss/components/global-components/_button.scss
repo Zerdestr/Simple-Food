@@ -1,0 +1,32 @@
+.button {
+  display: inline-block;
+  color: $white;
+  font-size: 18px;
+  line-height: 1.3;
+  padding: 12px 32px;
+  background-color: $orange-900;
+  border-radius: 6px;
+  outline: 2px solid transparent;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, outline 0.3s ease-in-out;
+
+  @include mq("phone") {
+    font-size: 14px;
+  }
+
+  &:focus {
+    color: $orange-900;
+    background-color: rgba($color: $orange-900, $alpha: 0.1);
+    outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+  }
+
+  &:hover {
+    color: $orange-900;
+    background-color: $white;
+    outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+  }
+
+  &:active {
+    outline: transparent;
+    background-color: rgba($color: $orange-900, $alpha: 0.1);
+  }
+}

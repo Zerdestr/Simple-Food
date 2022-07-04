@@ -24,10 +24,10 @@ $(function () {
 
     .on('click', '.product-catalog__btn', function () {
       $('body').toggleClass('no-scroll');
-      $('.mobile-sorting').toggleClass('mobile-menu--active');
+      $('.product-sorting').toggleClass('product-sorting--active');
     })
 
-    .on('click', '.mobile-sorting__burger', function () {
+    .on('click', '.product-sorting__burger', function () {
       $('.product-catalog__btn').trigger('click');
     })
 
@@ -112,28 +112,26 @@ $(function () {
     }
   });
 
-
   var $range = $(".price-range__slider"),
     $inputFrom = $(".price-range__input--from"),
     $inputTo = $(".price-range__input--to"),
-    priceRange = document.getElementById('price-range'),
     instance,
-    min = priceRange.dataset.min,
-    max = priceRange.dataset.max,
-    from = priceRange.dataset.from,
-    to = priceRange.dataset.to;
+    min = 0,
+    max = 1200,
+    from = 0,
+    to = 0;
 
   $range.ionRangeSlider({
     skin: "round",
     type: "double",
     min: min,
     max: max,
-    from: from,
-    to: to,
+    from: 100,
+    to: 1000,
     onStart: updateInputs,
-    onChange: updateInputs,
-    onFinish: updateInputs
+    onChange: updateInputs
   });
+  
   instance = $range.data("ionRangeSlider");
 
   function updateInputs(data) {
@@ -144,7 +142,7 @@ $(function () {
     $inputTo.prop("value", to);
   }
 
-  $inputFrom.on("change", function () {
+  $inputFrom.on("input", function () {
     var val = $(this).prop("value");
 
     // validate
@@ -157,12 +155,9 @@ $(function () {
     instance.update({
       from: val
     });
-
-    $(this).prop("value", val);
-
   });
 
-  $inputTo.on("change", function () {
+  $inputTo.on("input", function () {
     var val = $(this).prop("value");
 
     // validate
@@ -175,8 +170,6 @@ $(function () {
     instance.update({
       to: val
     });
-
-    $(this).prop("value", val);
   });
 
 });
