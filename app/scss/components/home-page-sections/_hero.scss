@@ -14,7 +14,7 @@
     position: relative;
     align-items: center;
     margin-bottom: 120px;
-    @include responsive-ratio(10, 1.33);
+    padding: 155px 0;
     background-size: 560px calc(min(660px, 100%));
     background-repeat: no-repeat;
     background-position: right top;

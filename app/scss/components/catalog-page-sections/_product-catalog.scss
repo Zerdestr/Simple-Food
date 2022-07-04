@@ -1,15 +1,26 @@
-.mobile-menu-sorting {
-  display: block;
-  transform: translateX(0);
-}
-
 .product-catalog {
   margin-bottom: 120px;
+
+  @include mq("tablet") {
+    margin-bottom: 80px;
+  }
+
+  @include mq("phone") {
+    margin-bottom: 40px;
+  }
 
   &__top {
     display: flex;
     justify-content: space-between;
     margin-bottom: 60px;
+
+    @include mq("tablet") {
+      flex-direction: column;
+    }
+
+    @include mq("phone") {
+      margin-bottom: 30px;
+    }
   }
 
   &__navigation {
@@ -22,7 +33,7 @@
   }
 
   &__btn {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     width: 47px;
@@ -32,6 +43,10 @@
     margin-right: 10px;
     color: $orange-900;
     transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    @include mq("tablet") {
+      display: flex;
+    }
 
     &:hover {
       background-color: $orange-900;
@@ -51,6 +66,10 @@
 
   &__title {
     margin-right: auto;
+
+    @include mq("tablet") {
+      margin-bottom: 20px;
+    }
   }
 
   &__filter {
@@ -66,6 +85,7 @@
 
   .jq-selectbox {
     background-color: $white;
+     z-index: 5;
 
     &__select {
       padding: 14px 40px 14px 15px;
@@ -74,6 +94,7 @@
       border: 1px solid $gray;
       border-radius: 3px;
       transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+     
 
       &:hover {
         border-color: $orange-900;
@@ -125,19 +146,20 @@
   &__content {
     display: flex;
   }
-
-  &__sorting {
-    max-width: 270px;
-  }
 }
 
 .product-sorting {
   margin-right: 30px;
 
+  @include mq("tablet") {
+    display: none;
+  }
+
   &__box {
     background-color: $white;
     border: 1px solid $silver-200;
     border-radius: 5px;
+    max-width: 270px;
 
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -166,6 +188,10 @@
     font-size: 18px;
     line-height: 1.3;
     transition: color 0.3s ease-in-out;
+
+    @include mq("tablet") {
+      display: block;
+    }
   }
 }
 
@@ -309,12 +335,25 @@
 }
 
 .products {
+  @include mq("tablet-2") {
+    margin: 0 auto;
+  }
+
   &__products-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 10px;
     grid-column-gap: 10px;
     margin-bottom: 60px;
+
+    @include mq("tablet-2") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mq("phone") {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 30px;
+    }
   }
 
   &__pagination-list {
@@ -325,6 +364,15 @@
   &__pagination-item {
     &:not(:last-child) {
       margin-right: 6px;
+    }
+
+    @include mq("phone") {
+      &:nth-child(3) {
+        display: none;
+      }
+      &:nth-last-child(3) {
+        display: none;
+      }
     }
   }
 
@@ -372,5 +420,26 @@
   &__pagination-icon {
     width: 11px;
     height: 18px;
+  }
+}
+
+.mobile-sorting {
+  padding-top: 80px;
+  display: none;
+
+  @include mq("tablet") {
+    display: block;
+
+    &__content {
+      display: block;
+    }
+  }
+
+  &__burger {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    margin: 0;
+    background-color: $orange-bg;
   }
 }

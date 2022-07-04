@@ -14,7 +14,7 @@
   @include mq("phone") {
     padding: 25px 0;
   }
-  
+
   &__logo {
     .logo__image {
       @include mq("phone") {
@@ -24,7 +24,6 @@
     }
   }
 }
-
 
 .user-nav {
   display: flex;
@@ -121,5 +120,15 @@
       top: -4px;
       right: -6px;
     }
+  }
+}
+
+.mobile-header {
+  &__burger {
+    position: absolute;
+    right: 15px;
+    top: 24px;
+    margin: 0;
+    
   }
 }

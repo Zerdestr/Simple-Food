@@ -83,7 +83,7 @@
   </div>
 </header>
 
-<nav class="mobile-menu">
+<nav class="mobile-menu mobile-header">
 
   <div class="container">
 
@@ -94,7 +94,7 @@
   </div>
 
 
-  <button class="mobile-menu__burger burger burger--active" type="button">
+  <button class="mobile-header__burger burger burger--active" type="button">
     <span class="burger__line"></span>
     <span class="sr-only">Открыть меню</span>
   </button>
@@ -194,142 +194,141 @@
 
   <main class="main">
 
-    <nav class="mobile-menu mobile-menu-sorting">
-
-  <div class="container">
-
-    <div class="product-catalog__sorting product-sorting">
-
-      <button class="mobile-menu__burger burger burger--active" type="button">
-        <span class="burger__line"></span>
-        <span class="sr-only">Открыть меню</span>
-      </button>
-
-      <div class="product-sorting__box">
-
-        <h3 class="product-sorting__title">Категории</h3>
-
-        <ul class="product-sorting__list">
-
-          <li class="product-sorting__item">
-            <a class="link-effects product-sorting__link menu__link" href="#">Бургеры</a>
-          </li>
-
-          <li class="product-sorting__item">
-            <a class="link-effects product-sorting__link" href="#">Пицца</a>
-          </li>
-
-          <li class="product-sorting__item">
-            <a class="link-effects product-sorting__link" href="#">Сендвичи</a>
-          </li>
-
-          <li class="product-sorting__item">
-            <a class="link-effects product-sorting__link" href="#">Азиатская кухня</a>
-          </li>
-
-          <li class="product-sorting__item">
-            <a class="link-effects product-sorting__link" href="#">Сеты</a>
-          </li>
-
-          <li class="product-sorting__item">
-            <a class="link-effects product-sorting__link" href="#">Европейская кухня</a>
-          </li>
-
-          <li class="product-sorting__item">
-            <a class="link-effects product-sorting__link" href="#">Напитки</a>
-          </li>
-
-          <li class="product-sorting__item">
-            <a class="link-effects product-sorting__link" href="#">Алкоголь</a>
-          </li>
-        </ul>
-
-      </div>
-
-      <div class="product-sorting__box">
-
-        <h3 class="product-sorting__title">Предложения</h3>
-
-        <form class="product-sorting__offers offers" action="">
-
-          <label class="offers__item" for="discount">
-            <div class="offers__box">
-
-              <input class="offers__input" id="discount" type="checkbox">
-              <span class="offers__checkbox"></span>
-
-            </div>
-            <span class="offers__text">Со скидкой</span>
-          </label>
-
-          <label class="offers__item">
-
-            <div class="offers__box">
-              <input class="offers__input" type="checkbox">
-              <span class="offers__checkbox"></span>
-            </div>
-
-            <span class="offers__text">Новинка</span>
-          </label>
+    <nav class="mobile-menu mobile-sorting">
 
 
-          <label class="offers__item">
 
-            <div class="offers__box">
+  <div class="mobile-sorting__content product-sorting">
 
-              <input class="offers__input" type="checkbox">
-              <span class="offers__checkbox"></span>
+    <button class="burger burger--active mobile-sorting__burger" type="button">
+      <span class="burger__line"></span>
+      <span class="sr-only">Открыть меню</span>
+    </button>
 
-            </div>
+    <div class="product-sorting__box">
 
-            <span class="offers__text">Хит</span>
-          </label>
+      <h3 class="product-sorting__title">Категории</h3>
 
-        </form>
+      <ul class="product-sorting__list">
 
-      </div>
+        <li class="product-sorting__item">
+          <a class="link-effects product-sorting__link" href="#">Бургеры</a>
+        </li>
 
-      <div class="product-sorting__box">
+        <li class="product-sorting__item">
+          <a class="link-effects product-sorting__link" href="#">Пицца</a>
+        </li>
 
-        <h3 class="product-sorting__title">Цена</h3>
+        <li class="product-sorting__item">
+          <a class="link-effects product-sorting__link" href="#">Сендвичи</a>
+        </li>
 
-        <form class="product-sorting__price price-range" name="f_price" action="#">
+        <li class="product-sorting__item">
+          <a class="link-effects product-sorting__link" href="#">Азиатская кухня</a>
+        </li>
 
-          <label class="price-range__numbers">
+        <li class="product-sorting__item">
+          <a class="link-effects product-sorting__link" href="#">Сеты</a>
+        </li>
 
-            <div class="price-range__item price-range__item--from">
+        <li class="product-sorting__item">
+          <a class="link-effects product-sorting__link" href="#">Европейская кухня</a>
+        </li>
 
-              <span>от</span>
+        <li class="product-sorting__item">
+          <a class="link-effects product-sorting__link" href="#">Напитки</a>
+        </li>
 
-              <input type="text" class="price-range__input price-range__input--from" value="0" />
+        <li class="product-sorting__item">
+          <a class="link-effects product-sorting__link" href="#">Алкоголь</a>
+        </li>
+      </ul>
 
-              <span>₴</span>
+    </div>
 
-            </div>
+    <div class="product-sorting__box">
 
-            <div class="price-range__item">
+      <h3 class="product-sorting__title">Предложения</h3>
 
-              <span>до</span>
+      <form class="product-sorting__offers offers" action="">
 
-              <input type="text" class="price-range__input price-range__input--to" value="0" />
+        <label class="offers__item" for="discount">
+          <div class="offers__box">
 
-              <span>₴</span>
+            <input class="offers__input" id="discount" type="checkbox">
+            <span class="offers__checkbox"></span>
 
-            </div>
+          </div>
+          <span class="offers__text">Со скидкой</span>
+        </label>
 
-          </label>
+        <label class="offers__item">
 
-          <label for="price-range-slider" id="price-range" data-min="0" data-max="1200" data-from="100"
-            data-to="1000"></label>
-          <input type="text" class="price-range__slider" value="" />
+          <div class="offers__box">
+            <input class="offers__input" type="checkbox">
+            <span class="offers__checkbox"></span>
+          </div>
 
-        </form>
+          <span class="offers__text">Новинка</span>
+        </label>
 
-      </div>
+
+        <label class="offers__item">
+
+          <div class="offers__box">
+
+            <input class="offers__input" type="checkbox">
+            <span class="offers__checkbox"></span>
+
+          </div>
+
+          <span class="offers__text">Хит</span>
+        </label>
+
+      </form>
+
+    </div>
+
+    <div class="product-sorting__box">
+
+      <h3 class="product-sorting__title">Цена</h3>
+
+      <form class="product-sorting__price price-range" name="f_price" action="#">
+
+        <label class="price-range__numbers">
+
+          <div class="price-range__item price-range__item--from">
+
+            <span>от</span>
+
+            <input type="text" class="price-range__input price-range__input--from" value="0" />
+
+            <span>₴</span>
+
+          </div>
+
+          <div class="price-range__item">
+
+            <span>до</span>
+
+            <input type="text" class="price-range__input price-range__input--to" value="0" />
+
+            <span>₴</span>
+
+          </div>
+
+        </label>
+
+        <label for="price-range-slider" id="price-range" data-min="0" data-max="1200" data-from="100"
+          data-to="1000"></label>
+        <input type="text" class="price-range__slider" value="" />
+
+      </form>
 
     </div>
 
   </div>
+
 
 </nav>
 

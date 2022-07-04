@@ -12,7 +12,7 @@
   &__inner {
     background-repeat: no-repeat;
     background-position: top right;
-    background-size: calc(min(570px, 50%)) calc(min(380px, 100%));
+    background-size: 570px 380px;
     display: flex;
     align-items: center;
 
@@ -24,6 +24,7 @@
   &__content {
     padding: 40px 0;
     max-width: 540px;
+    background-color: rgba($color: $silver-100, $alpha: 0.85);
 
     @include mq("tablet-2") {
       max-width: 50%;

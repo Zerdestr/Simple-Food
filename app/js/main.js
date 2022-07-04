@@ -15,11 +15,20 @@ $(function () {
 
     .on('click', '.menu__burger', function () {
       $('body').toggleClass('no-scroll');
-      $('.mobile-menu').toggleClass('mobile-menu--active');
+      $('.mobile-header').toggleClass('mobile-menu--active');
     })
 
-    .on('click', '.mobile-menu__burger', function () {
+    .on('click', '.mobile-header__burger', function () {
       $('.menu__burger').trigger('click');
+    })
+
+    .on('click', '.product-catalog__btn', function () {
+      $('body').toggleClass('no-scroll');
+      $('.mobile-sorting').toggleClass('mobile-menu--active');
+    })
+
+    .on('click', '.mobile-sorting__burger', function () {
+      $('.product-catalog__btn').trigger('click');
     })
 
   $('.product-catalog__filter').styler();

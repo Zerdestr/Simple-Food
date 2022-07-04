@@ -400,21 +400,31 @@ body {
     top: calc(100% - 2px);
   }
 
+  &--active {
+    width: 40px;
+    height: 40px;
+  }
+
   &--active &__line {
     transform: scale(0);
     transition: transform 0.3s ease-in-out;
   }
 
   &--active::before {
-    transform: rotate(45deg);
+    transform: rotate(45deg) translateY(-9px) translateX(7px);
     top: 50%;
+
     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    width: 18px;
   }
 
   &--active::after {
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) translateY(7px) translateX(9px);
     top: 50%;
+
     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    width: 18px;
+
   }
 }
 
@@ -447,13 +457,6 @@ body {
   &__logo {
     display: inline-block;
     margin-bottom: 25px;
-  }
-
-  &__burger {
-    position: absolute;
-    right: 26px;
-    top: 35px;
-    margin: 0;
   }
 
   .mobile-nav {
@@ -583,6 +586,7 @@ body {
   max-width: max-content;
   margin: 0 auto;
   font-size: 24px;
+  line-height: 1;
 }
 
 .swipers__pagination-bullet {
@@ -655,6 +659,11 @@ body {
 
   @include mq("tablet-2") {
     padding-top: 138px;
+  }
+
+  @include mq("phone") {
+    padding-top: 97px;
+    margin-bottom: 40px;
   }
 
   &__list {

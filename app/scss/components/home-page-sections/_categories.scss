@@ -126,8 +126,10 @@
     grid-row-gap: 30px;
     grid-column-gap: 30px;
     margin-bottom: 60px;
+
     &--active {
       display: grid;
+
 
       @include mq("tablet") {
         grid-row-gap: 15px;
@@ -138,6 +140,8 @@
 
       @include mq("phone") {
         grid-template-columns: repeat(2, 1fr);
+        max-width: max-content;
+        margin: 0 auto;
       }
     }
   }

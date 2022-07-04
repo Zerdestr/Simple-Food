@@ -15,7 +15,6 @@
     justify-content: end;
     padding: 60px 0;
     margin: 0 70px;
-    @include responsive-ratio(10, 0.5);
     background-size: 440px calc(min(585px, 100%));
     background-repeat: no-repeat;
     background-position: left top;
