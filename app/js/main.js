@@ -14,22 +14,60 @@ $(function () {
     })
 
     .on('click', '.menu__burger', function () {
-      $('body').toggleClass('no-scroll');
-      $('.mobile-header').toggleClass('mobile-menu--active');
+      $('body').addClass('no-scroll');
+      $('.mobile-header').addClass('mobile-menu--active');
     })
 
     .on('click', '.mobile-header__burger', function () {
-      $('.menu__burger').trigger('click');
+      $('.mobile-header').removeClass('mobile-menu--active');
     })
 
     .on('click', '.product-catalog__btn', function () {
-      $('body').toggleClass('no-scroll');
-      $('.product-sorting').toggleClass('product-sorting--active');
+      $('body').addClass('no-scroll');
+      $('.product-sorting').addClass('product-sorting--active');
     })
 
     .on('click', '.product-sorting__burger', function () {
-      $('.product-catalog__btn').trigger('click');
+      $('.product-sorting').removeClass('product-sorting--active');
     })
+
+
+
+  $(document).mouseup(function (hideMobileMenu) {
+    var mobileMenu = $(".mobile-menu");
+    var menuBurger = $(".menu__burger");
+    var productSorting = $(".product-sorting");
+    var productBtn = $(".product-catalog__btn");
+    if
+      (!menuBurger.is(hideMobileMenu.target)
+      && !mobileMenu.is(hideMobileMenu.target)
+      && mobileMenu.has(hideMobileMenu.target)
+        .length === 0) {
+      mobileMenu.removeClass('mobile-menu--active');
+      $('body').removeClass('no-scroll');
+    }
+    if
+      (!productBtn.is(hideMobileMenu.target)
+      && !productSorting.is(hideMobileMenu.target)
+      && productSorting.has(hideMobileMenu.target)
+        .length === 0) {
+      productSorting.removeClass('product-sorting--active');
+      $('body').removeClass('no-scroll');
+    }
+  });
+
+
+
+
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 80) {
+      $(".header").addClass("header--fixed");
+    } else {
+      $(".header").removeClass("header--fixed");
+    }
+  });
 
   $('.product-catalog__filter').styler();
 
@@ -63,6 +101,26 @@ $(function () {
 
   let restaurantsSlider = null;
   let mediaQuerySize = 992;
+  let mediaQuerySize2 = 768;
+  let numSlide = 2;
+
+
+  $(window).on('load resize', function () {
+
+    var windowWidth = $(this).innerWidth();
+
+
+    if (windowWidth <= mediaQuerySize) {
+
+      numSlide = 2
+
+    }
+    if (windowWidth <= mediaQuerySize2) {
+      numSlide = 1
+    }
+  });
+
+
 
   function restaurantsSliderInit() {
     if (!restaurantsSlider) {
@@ -71,6 +129,8 @@ $(function () {
         autoplay: {
           delay: 5000,
         },
+
+        slidesPerView: numSlide,
 
         wrapperClass: 'swiper-for-mobile__wrapper',
 
@@ -131,7 +191,7 @@ $(function () {
     onStart: updateInputs,
     onChange: updateInputs
   });
-  
+
   instance = $range.data("ionRangeSlider");
 
   function updateInputs(data) {

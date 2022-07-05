@@ -42,13 +42,6 @@
     }
   }
 
-  &__slide {
-    @include mq("tablet-2") {
-      display: flex;
-      justify-content: center;
-    }
-  }
-
   &__card {
     padding: 0;
   }

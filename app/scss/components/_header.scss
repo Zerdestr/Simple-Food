@@ -3,9 +3,10 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 10;
+  z-index: 11;
   padding: 60px 0;
   background-color: $silver-100;
+  transition: padding 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
   @include mq("tablet-2") {
     padding: 35px 0;
@@ -15,12 +16,53 @@
     padding: 25px 0;
   }
 
+  &--fixed {
+    padding: 35px 0;
+    box-shadow: 0 0 0 2px #ff6838;
+
+    @include mq("tablet-2") {
+      padding: 25px 0;
+    }
+  }
+
   &__logo {
     .logo__image {
       @include mq("phone") {
         width: 115px;
         height: 23px;
       }
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $silver-100;
+
+  .header-nav {
+    @include mq("tablet") {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    margin: 0 55px 0 auto;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 45px;
+  }
+
+  &__link {
+    transition: color 0.25s ease-in-out, text-shadow 0.1s ease-in-out;
+
+    &--active {
+      color: $orange-900;
     }
   }
 }
@@ -129,7 +171,10 @@
     right: 15px;
     top: 24px;
     margin: 0;
-    
+
+    @include mq("phone") {
+      right: 0;
+    }
   }
 }
 
@@ -142,6 +187,7 @@
   right: 75px;
   bottom: 0;
   padding: 25px 0;
+  max-width: 320px;
   background-color: $white;
   transform: translateX(-150%);
   transition: transform 0.3s ease-in-out;
