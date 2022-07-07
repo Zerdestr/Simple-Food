@@ -165,7 +165,7 @@
     overflow-y: auto;
     height: 100vh;
     transform: translateX(-150%);
-    transition: transform .3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 
     &--active {
       transform: translateX(0);
@@ -231,6 +231,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 12px;
+    padding-left: 36px;
 
     &:hover {
       .offers__checkbox {
@@ -266,21 +267,19 @@
     border-radius: 3px;
     border: 1px solid $silver-200;
     position: absolute;
+    left: 30px;
     background-repeat: no-repeat;
     background-position: center;
     margin: 0;
 
     transition: border-color 0.3s ease-in-out;
   }
-
-  &__text {
-    padding-left: 36px;
-  }
 }
 
 .price-range {
   padding: 25px 15px 38px;
   font-size: 16px;
+  display: grid;
 
   &__wrapper {
     display: flex;
@@ -311,6 +310,12 @@
     line-height: 1;
     background-color: $orange-bg;
     border-radius: 3px;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
 
     &:focus {
       outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
@@ -437,14 +442,14 @@
       background-color: $orange-bg;
       color: $darkBlue-900;
     }
-  }
 
-  .products-pagination-prew {
-    color: $gray;
-  }
+    &--prev {
+      color: $gray;
+    }
 
-  .products-pagination-next {
-    color: $darkBlue-900;
+    &--next {
+      color: $darkBlue-900;
+    }
   }
 
   &__icon {

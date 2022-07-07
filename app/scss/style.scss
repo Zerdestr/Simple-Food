@@ -3,6 +3,21 @@
 @import "vars";
 @import "global";
 
+@import "./components/global-elements/title";
+@import "./components/global-elements/sr-only";
+@import "./components/global-elements/button";
+@import "./components/global-elements/show-more";
+@import "./components/global-elements/link-effects";
+@import "./components/global-elements/logo";
+@import "./components/global-elements/contacts";
+@import "./components/global-elements/social";
+@import "./components/global-elements/product-card";
+@import "./components/global-elements/restaurant-card";
+@import "./components/global-elements/burger";
+@import "./components/global-elements/swipers";
+@import "./components/global-elements/swiper-for-mobile";
+@import "./components/global-elements/breadcrumbs";
+
 @import "./components/header";
 
 @import "./components/home-page-sections/hero";
@@ -14,11 +29,10 @@
 @import "./components/catalog-page-sections/product-catalog";
 @import "./components/catalog-page-sections/discounts";
 
+@import "./components/product-page-sections/product";
+@import "./components/product-page-sections/info-tabs";
+@import "./components/product-page-sections/interested";
+
 @import "./components/mobile";
 
 @import "./components/footer";
-
-
-
-
-

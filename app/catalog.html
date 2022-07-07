@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <title>Simple Food | Страница каталога</title>
+  <title>Simple Food |  Страница
+    каталога 
+  </title>
   <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
@@ -50,7 +52,7 @@
           </li>
 
           <li class="menu__item mobile-nav__item">
-            <a class="link-effects menu__link menu__link menu__link--active mobile-nav__link"
+            <a class="link-effects menu__link menu__link--active mobile-nav__link"
               href="catalog.html">Блюда</a>
           </li>
 
@@ -192,14 +194,16 @@
 
   <main class="main">
 
-    <div class="breadcrumbs">
+    <h1 class="sr-only">Каталог товаров</h1>
+
+<div class="breadcrumbs">
   <div class="container">
     <ul class="breadcrumbs__list">
       <li class="breadcrumbs__item">
         <a class="breadcrumbs__link" href="index.html">Главная</a>
       </li>
       <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="#">Каталог товаров</a>
+        <a class="breadcrumbs__link">Каталог товаров</a>
       </li>
     </ul>
   </div>
@@ -245,7 +249,9 @@
 
     <div class="product-catalog__content">
 
-      <div class="product-catalog__sorting product-sorting">
+      <section class="product-sorting">
+
+        <h2 class="sr-only">Сортировка товара</h2>
 
         <button class="burger burger--active product-sorting__burger" type="button">
           <span class="burger__line"></span>
@@ -259,7 +265,7 @@
           <ul class="product-sorting__list">
 
             <li class="product-sorting__item">
-              <a class="link-effects product-sorting__link menu__link" href="#">Бургеры</a>
+              <a class="link-effects product-sorting__link" href="#">Бургеры</a>
             </li>
 
             <li class="product-sorting__item">
@@ -304,7 +310,7 @@
               <input class="offers__input" type="checkbox">
               <span class="offers__checkbox"></span>
 
-              <span class="offers__text">Со скидкой</span>
+              Со скидкой
             </label>
 
             <label class="offers__item">
@@ -312,7 +318,7 @@
               <input class="offers__input" type="checkbox">
               <span class="offers__checkbox"></span>
 
-              <span class="offers__text">Новинка</span>
+              Новинка
             </label>
 
 
@@ -321,7 +327,7 @@
               <input class="offers__input" type="checkbox">
               <span class="offers__checkbox"></span>
 
-              <span class="offers__text">Хит</span>
+              Хит
             </label>
 
           </form>
@@ -344,7 +350,7 @@
 
                 <span>от</span>
 
-                <input type="text" class="price-range__input price-range__input--from" id="price-from" value="0" />
+                <input type="number" class="price-range__input price-range__input--from" id="price-from" value="0" />
 
                 <span>₴</span>
 
@@ -356,7 +362,7 @@
 
                 <span>до</span>
 
-                <input type="text" class="price-range__input price-range__input--to" id="price-to" value="0" />
+                <input type="number" class="price-range__input price-range__input--to" id="price-to" value="0" />
 
                 <span>₴</span>
 
@@ -365,21 +371,23 @@
             </div>
 
             <label class="price-range__numbers" for="price-range">Диапазон цен</label>
-            <input class="price-range__slider" type="text" id="price-range" value="" />
+            <input class="price-range__slider" type="number" id="price-range" value="" />
 
           </form>
 
         </div>
 
-      </div>
+      </section>
 
-      <div class="product-catalog__products products">
+      <section class="products">
+
+        <h2 class="sr-only">Каталог товара</h2>
 
         <ul class="products__list">
 
           <li class="products__item">
-            <article class="products__card product-card">
-              <a class="product-card__link" href="#">
+            <article class="product-card">
+              <a class="product-card__link" href="product.html">
                 <img class="product-card__image" src="./images/categories-item-1.png" alt="Фото товара" width="140"
                   height="140">
                 <h3 class="product-card__text">
@@ -393,7 +401,7 @@
 
           <li class="products__item">
             <article class="products__product product-card">
-              <a class="product-card__link" href="#">
+              <a class="product-card__link" href="product.html">
                 <img class="product-card__image" src="./images/categories-item-2.png" alt="Фото товара" width="140"
                   height="140">
                 <h3 class="product-card__text">
@@ -407,7 +415,7 @@
 
           <li class="products__item">
             <article class="products__product product-card">
-              <a class="product-card__link" href="#">
+              <a class="product-card__link" href="product.html">
                 <img class="product-card__image" src="./images/categories-item-3.png" alt="Фото товара" width="140"
                   height="140">
                 <h3 class="product-card__text">
@@ -421,7 +429,7 @@
 
           <li class="products__item">
             <article class="products__product product-card">
-              <a class="product-card__link" href="#">
+              <a class="product-card__link" href="product.html">
                 <img class="product-card__image" src="./images/categories-item-4.png" alt="Фото товара" width="140"
                   height="140">
                 <h3 class="product-card__text">
@@ -553,7 +561,7 @@
           <ul class="products-pagination__list">
 
             <li class="products-pagination__item">
-              <a class="products-pagination__link products-pagination-prew" href="#">
+              <a class="products-pagination__link products-pagination__link--prev" href="#">
                 <span class="sr-only">Предыдущая страница товара</span>
                 <svg class="products-pagination__icon">
                   <use xlink:href="images/sprite.svg#icon-product-catalog-prev"></use>
@@ -582,7 +590,7 @@
             </li>
 
             <li class="products-pagination__item">
-              <a class="products-pagination__link products-pagination-next" href="#">
+              <a class="products-pagination__link products-pagination__link--next" href="#">
                 <span class="sr-only">Следующая страница товара</span>
                 <svg class="products-pagination__icon">
                   <use xlink:href="images/sprite.svg#icon-product-catalog-next"></use>
@@ -594,13 +602,13 @@
 
         </div>
 
-      </div>
+      </section>
 
     </div>
 
   </div>
 </section>
-    
+
     <section class="mobile">
   <div class="container">
 
@@ -637,7 +645,7 @@
     </div>
   </div>
 </section>
-    
+
     <section class="discounts">
   <div class="container">
 
@@ -649,7 +657,7 @@
 
         <div class="swiper-for-mobile__slide discounts__slide">
 
-          <article class="restaurant-card discounts__card">
+          <article class="restaurant-card">
 
             <a class="discounts__link" href="#">
 
@@ -666,7 +674,7 @@
 
         <div class="swiper-for-mobile__slide discounts__slide">
 
-          <article class="restaurant-card discounts__card">
+          <article class="restaurant-card">
 
             <a class="discounts__link" href="#">
 
@@ -682,7 +690,7 @@
 
         <div class="swiper-for-mobile__slide discounts__slide">
 
-          <article class="restaurant-card discounts__card">
+          <article class="restaurant-card">
 
             <a class="discounts__link" href="#">
 

@@ -1,0 +1,55 @@
+.product {
+  padding-bottom: 60px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $silver;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__gallery-min {
+    max-width: 610px;
+  }
+
+  &__content {
+    max-width: 530px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__raiting {
+    margin-bottom: 25px;
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  &__trade {
+    margin-bottom: 30px;
+  }
+}
+
+.delivery {
+  &__title {
+    display: block;
+    border-bottom: 1px solid $silver;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+
+  &__info {
+    font-size: 16px;
+    color: $dark-100;
+    margin-bottom: 20px;
+  }
+}

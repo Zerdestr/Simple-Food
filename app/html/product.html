@@ -1,0 +1,21 @@
+@include('./components/_head.html', {
+"page": "product"
+})
+
+<div class="wrapper">
+
+  @include('./components/_header.html')
+
+  <main class="main">
+
+    @include('./components/product-page-sections/_product.html')
+    @include('./components/product-page-sections/_info-tabs.html')
+    @include('./components/product-page-sections/_interested.html')
+
+  </main>
+
+  @include('components/_footer.html')
+
+</div>
+
+@include('components/_footer-scripts.html')

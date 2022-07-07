@@ -24,6 +24,7 @@
     "ion-rangeslider": "^2.3.0",
     "jquery": "^3.6.0",
     "jquery-form-styler": "^2.0.2",
+    "rateyo": "^2.3.2",
     "sass": "^1.52.3",
     "swiper": "^8.2.4"
   }
