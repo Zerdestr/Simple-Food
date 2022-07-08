@@ -1,0 +1,209 @@
+.info-tabs {
+  padding-bottom: 120px;
+
+  &__wrapper {
+    max-width: 690px;
+    margin: 0 auto;
+  }
+
+  &__nav {
+    display: flex;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    padding: 2px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
+
+  &__btn {
+    font-size: 24px;
+    color: $darkBlue-900;
+    transition: color 0.3s ease-in-out;
+    white-space: nowrap;
+
+    &--active {
+      color: $orange-900;
+    }
+
+    &:hover {
+      color: $orange-900;
+    }
+
+    &:focus {
+      outline: 2px solid rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+    }
+
+    &:active {
+      color: $darkBlue-900;
+      text-shadow: 2px 2px 5px rgb(49 53 43 / 50%);
+      outline: transparent;
+    }
+  }
+
+  &__content {
+    display: none;
+
+    &--description {
+      p:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__characteristic {
+    font-weight: 500;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__data {
+    font-weight: 400;
+  }
+}
+
+.reviews-tabs {
+  &__list {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    border-bottom: 1px solid $silver;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.review-tabs {
+  padding-bottom: 20px;
+  color: $dark-100;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__client-img {
+    border-radius: 50%;
+    margin-right: 25px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  &__date {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+}
+
+.form {
+  margin-bottom: 15px;
+
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+
+  &__raiting {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__raiting-title {
+    margin-right: 15px;
+  }
+
+  &__inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    color: $dark-100;
+  }
+
+  &__textarea {
+    min-width: 400px;
+    resize: vertical;
+    min-height: 165px;
+    display: block;
+  }
+
+  &__input {
+    border: 1px solid $gray;
+    border-radius: 5px;
+    padding: 17px;
+    font-size: 16px;
+    line-height: 1.3;
+    display: block;
+
+    &::placeholder {
+      color: $gray-g;
+    }
+
+    &:focus {
+      outline: 2px solid rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+    }
+  }
+
+  &__save {
+    display: block;
+    margin-bottom: 30px;
+    position: relative;
+    font-size: 18px;
+    line-height: 1.3;
+
+    .custom-checkbox__checkbox {
+      left: 0;
+      top: -1px;
+      background-color: $white;
+    }
+  }
+}

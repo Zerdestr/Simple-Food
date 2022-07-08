@@ -3,46 +3,145 @@
 
     <h2 class="sr-only">Информация и отзывы о товаре</h2>
 
-    <ul class="info-tabs__nav">
-      <li class="info-tabs__item">
-        <button class="info-tabs__btn" type="button">Описание</button>
-      </li>
-      <li class="info-tabs__item">
-        <button class="info-tabs__btn" type="button">Характеристики</button>
-      </li>
-      <li class="info-tabs__item">
-        <button class="info-tabs__btn" type="button">Отзывы <span>(2)</span></button>
-      </li>
-    </ul>
+    <div class="info-tabs__wrapper">
 
-    <div class="info-tabs__description">
-      <p>
-        Рубленый бифштекс из натуральной говядины на карамелизованной булочке, с ломтиком сыра «Чеддер», кетчупом,
-        горчицей,
-        луком и маринованными огурчиками.
-      </p>
-      <p>
-        Аллергены: Глютен, Молоко, Горчица, Может содержать сою, яйцо, следы кунжута
-      </p>
-      <p>
-        Внешний вид товара может отличаться от изображений, представленных на сайте.
-      </p>
-    </div>
+      <ul class="info-tabs__nav">
 
-    <ul class="info-tabs__characteristics">
-      <li class="info-tabs__characteristic">Диаметр: <span>20 см</span></li>
-      <li class="info-tabs__characteristic">Вес: <span>300 гр</span></li>
-      <li class="info-tabs__characteristic">Калорийность (на 100г): <span>295 ккал</span></li>
-      <li class="info-tabs__characteristic">Срок хранения:<span>до 3 дней</span></li>
-    </ul>
+        <li class="info-tabs__item">
+          <button class="info-tabs__btn info-tabs__btn--active" type="button" rel="description">Описание</button>
+        </li>
 
-    <div class="info-tabs__reviews reviews">
-      <h3 class="reviews__title">Мнения наших клиентов</h3>
-      <ul class="reviews__list">
-        <li class="reviews__item">
-          
+        <li class="info-tabs__item">
+          <button class="info-tabs__btn" type="button" rel="characteristics">Характеристики</button>
+        </li>
+
+        <li class="info-tabs__item">
+          <button class="info-tabs__btn" type="button" rel="reviews">Отзывы <spa>(2)</spa
+            n></button>
         </li>
       </ul>
+
+      <div class="info-tabs__content info-tabs__content--description info-tabs__content--active" id="description">
+        <p>
+          Рубленый бифштекс из натуральной говядины на карамелизованной булочке, с ломтиком сыра «Чеддер», кетчупом,
+          горчицей,
+          луком и маринованными огурчиками.
+        </p>
+        <p>
+          Аллергены: Глютен, Молоко, Горчица, Может содержать сою, яйцо, следы кунжута
+        </p>
+        <p>
+          Внешний вид товара может отличаться от изображений, представленных на сайте.
+        </p>
+      </div>
+
+      <ul class="info-tabs__content" id="characteristics" >
+        <li class="info-tabs__characteristic">Диаметр: <span class="info-tabs__data">20 см</span></li>
+        <li class="info-tabs__characteristic">Вес: <span class="info-tabs__data">300 гр</span></li>
+        <li class="info-tabs__characteristic">Калорийность (на 100г): <span class="info-tabs__data">295 ккал</span></li>
+        <li class="info-tabs__characteristic">Срок хранения:<span class="info-tabs__data">до 3 дней</span></li>
+      </ul>
+
+      <div class="info-tabs__content reviews-tabs" id="reviews">
+        <h3 class="reviews-tabs__title">Мнения наших клиентов</h3>
+        <ul class="reviews-tabs__list">
+
+          <li class="reviews-tabs__item review-tabs">
+
+            <div class="review-tabs__top">
+
+              <img class="review-tabs__client-img" width="70" height="70" src="../images/client-image.png" alt="Изображение профиля клиента">
+
+              <div class="review-tabs__info">
+                <span class="review-tabs__name">Андрей</span>
+                <span class="review-tabs__date">10.06.2021</span>
+              </div>
+
+              <button class="raiting" type="button" data-rateyo-rating="5" data-rateyo-read-only="true"></button>
+            </div>
+
+            <div class="reviews-tabs__text">
+              <p>
+                Доставили быстро. Товар свежий и очень вкусный, буду пробовать еще!))
+              </p>
+            </div>
+
+          </li>
+
+          <li class="reviews__item review-tabs">
+
+            <div class="review-tabs__top">
+
+              <img class="review-tabs__client-img" width="70" height="70" src="../images/client-image.png" alt="Изображение профиля клиента">
+
+              <div class="review-tabs__info">
+                <span class="review-tabs__name">Екатерина Белая</span>
+                <span class="review-tabs__date">7.06.2021</span>
+              </div>
+
+              <button class="raiting" type="button" data-rateyo-rating="4" data-rateyo-read-only="true"></button>
+            </div>
+
+            <div class="reviews-tabs__text">
+              <p>
+                этот бургер неплохой чтобы перекусить, когда нет возможности или времени что-нибудь приготовить. Это
+                отличный вариант,
+                чтобы съесть на ходу, но чтобы побаловать себя, я больше предпочту пиццу
+              </p>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="reviews__form form">
+          <div class="form__title">Оставить отзыв</div>
+
+          <form action="#" name="f_reviews">
+
+            <div class="form__raiting">
+              <span class="form__raiting-title">Ваша оценка *</span>
+              <button class="raiting" type="button" data-rateyo-rating="0"></button>
+            </div>
+
+            <div class="form__inputs ">
+
+              <div class="form__review">
+                <label class="form__label" for="f_review">Ваш отзыв *</label>
+                <textarea class="form__textarea form__input" id="f_review" placeholder="Введите текст отзыва"cols="30"
+                  rows="4" required></textarea>
+              </div>
+
+              <div class="form__client-data">
+
+                <div class="form__name">
+                  <label class="form__label" for="f_name">Имя</label>
+                  <input class="form__input" id="f_name" placeholder="Введите ваше имя" type="text">
+                </div>
+
+                <div class="form__email">
+                  <label class="form__label" for="f_email">Email *</label>
+                  <input class="form__input" id="f_email" placeholder="youremail@mail.com" type="email" required>
+                </div>
+
+              </div>
+
+            </div>
+
+            <label class="custom-checkbox form__save">
+
+              <input class="custom-checkbox__input" type="checkbox">
+              <span class="custom-checkbox__checkbox"></span>
+
+              Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
+            </label>
+
+            <button class="button" type="submit">Оставить отзыв</button>
+
+          </form>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
