@@ -29,19 +29,44 @@ $(function () {
     .on('click', '.menu__burger', function () {
       $('body').addClass('no-scroll');
       $('.mobile-header').addClass('mobile-menu--active');
+      $('header').addClass('mobile-acive')
+      $('.menu').addClass('mobile-acive')
     })
 
     .on('click', '.mobile-header__burger', function () {
       $('.mobile-header').removeClass('mobile-menu--active');
+      $('header').removeClass('mobile-acive')
+      $('.menu').removeClass('mobile-acive')
+      $('body').removeClass('no-scroll');
     })
 
     .on('click', '.product-catalog__btn', function () {
       $('body').addClass('no-scroll');
       $('.product-sorting').addClass('product-sorting--active');
+      $('header').addClass('mobile-acive')
+      $('.menu').addClass('mobile-acive')
     })
 
     .on('click', '.product-sorting__burger', function () {
       $('.product-sorting').removeClass('product-sorting--active');
+      $('header').removeClass('mobile-acive')
+      $('.menu').removeClass('mobile-acive')
+      $('body').removeClass('no-scroll');
+    })
+
+    .on('click', '.product-swiper__slide', function () {
+      $('body').addClass('no-scroll');
+      $('.product-swiper-big').addClass('product-swiper-big--active');
+      $('header').addClass('mobile-acive')
+      $('.menu').addClass('mobile-acive')
+    })
+
+    .on('click', '.product-swiper-big__btn', function () {
+      $('.product-swiper-big').removeClass('product-swiper-big--active');
+      $('header').removeClass('mobile-acive')
+      $('.menu').removeClass('mobile-acive')
+      $('body').removeClass('no-scroll');
+
     })
 
 
@@ -56,26 +81,49 @@ $(function () {
 
   });
 
+
+
+
   $(document).mouseup(function (hideMobileMenu) {
-    var mobileMenu = $(".mobile-menu");
-    var menuBurger = $(".menu__burger");
-    var productSorting = $(".product-sorting");
-    var productBtn = $(".product-catalog__btn");
+    let mobileMenu = $(".mobile-menu");
+    let productSorting = $(".product-sorting");
+    let productSwiperBig = $(".product-swiper-big");
+    let body = $("body");
+    let header = $(".header");
+    let menu = $(".menu");
+
     if
-      (!menuBurger.is(hideMobileMenu.target)
+      (mobileMenu.hasClass("mobile-menu--active")
       && !mobileMenu.is(hideMobileMenu.target)
       && mobileMenu.has(hideMobileMenu.target)
         .length === 0) {
-      mobileMenu.removeClass('mobile-menu--active');
-      $('body').removeClass('no-scroll');
+
+      mobileMenu.removeClass('mobile-menu--active')
+      body.removeClass('no-scroll');
+      header.removeClass('mobile-acive');
+      menu.removeClass('mobile-acive');
     }
     if
-      (!productBtn.is(hideMobileMenu.target)
+      (productSorting.hasClass("product-sorting--active")
       && !productSorting.is(hideMobileMenu.target)
       && productSorting.has(hideMobileMenu.target)
         .length === 0) {
-      productSorting.removeClass('product-sorting--active');
-      $('body').removeClass('no-scroll');
+
+      productSorting.removeClass('product-sorting--active')
+      body.removeClass('no-scroll');
+      header.removeClass('mobile-acive');
+      menu.removeClass('mobile-acive');
+    }
+    if
+      (productSwiperBig.hasClass("product-swiper-big--active")
+      && !productSwiperBig.is(hideMobileMenu.target)
+      && productSwiperBig.has(hideMobileMenu.target)
+        .length === 0) {
+
+      productSwiperBig.removeClass('product-swiper-big--active')
+      body.removeClass('no-scroll');
+      header.removeClass('mobile-acive');
+      menu.removeClass('mobile-acive');
     }
   });
 
@@ -168,10 +216,46 @@ $(function () {
     loop: true,
 
     navigation: {
-      nextEl: '.swipers__buttons--next',
-      prevEl: '.swipers__buttons--prev',
-    }
+      nextEl: '.product-swiper__buttons--next',
+      prevEl: '.product-swiper__buttons--prev',
+    },
+
   });
+
+  let productBigSwiper = new Swiper('.product-swiper-big', {
+
+    autoplay: {
+      delay: 5000,
+    },
+
+    wrapperClass: 'product-swiper-big__wrapper',
+
+    slideClass: 'product-swiper-big__slide',
+
+    direction: 'horizontal',
+    loop: true,
+
+    pagination: {
+      el: '.swipers__pagination',
+      type: 'bullets',
+      bulletClass: 'swipers__pagination-bullet',
+      bulletActiveClass: 'swipers__pagination-bullet--active',
+      clickable: true
+    },
+
+    navigation: {
+      nextEl: '.product-swiper__buttons--next',
+      prevEl: '.product-swiper__buttons--prev',
+    },
+  });
+
+  const swipeAllSliders = (index) => {
+    productSwiper.slideTo(index);
+    productBigSwiper.slideTo(index);
+  }
+
+  productSwiper.on('slideChange', () => swipeAllSliders(productSwiper.activeIndex));
+  productBigSwiper.on('slideChange', () => swipeAllSliders(productBigSwiper.activeIndex));
 
   let restaurantsSlider = null;
   let mediaQuerySize = 992;

@@ -1,6 +1,7 @@
 <h1 class="sr-only">Страница продукта</h1>
 
 <div class="breadcrumbs">
+
   <div class="container">
     <ul class="breadcrumbs__list">
       <li class="breadcrumbs__item">
@@ -20,70 +21,87 @@
   <div class="container">
     <div class="product__wrapper">
 
+      <div class="product__gallery-big product-swiper-big">
+
+        <button class="product-swiper-big__btn" type="button">
+          <svg class="product-swiper-big__btn-icon">
+            <use xlink:href="images/sprite.svg#product-swiper-big-btn"></use>
+          </svg>
+
+        </button>
+
+        <div class="product-swiper-big__wrapper">
+
+          <div class="product-swiper-big__slide">
+
+            <img class="product-swiper-big__img" src="../images/product-image-big.png" alt="">
+
+          </div>
+          <div class="product-swiper-big__slide">
+
+            <img class="product-swiper-big__img" src="../images/product-image-big.png" alt="">
+
+          </div>
+          <div class="product-swiper-big__slide">
+
+            <img class="product-swiper-big__img" src="../images/product-image-big.png" alt="">
+
+          </div>
+
+        </div>
+
+        <div class="product-swiper__buttons product-swiper__buttons--prev">
+          <svg class="product-swiper__buttons-icon">
+            <use xlink:href="images/sprite.svg#icon-product-prev"></use>
+          </svg>
+        </div>
+
+        <div class="product-swiper__buttons product-swiper__buttons--next">
+          <svg class="product-swiper__buttons-icon">
+            <use xlink:href="images/sprite.svg#icon-product-next"></use>
+          </svg>
+        </div>
+
+        <div class="swipers__pagination product-swiper-big__pagination"></div>
+      </div>
+
       <div class="product__gallery-min product-swiper">
 
         <div class="product-swiper__wrapper">
 
           <div class="product-swiper__slide">
-            <a class="product-swiper__link" href="#">
-              <img class="product-swiper__img" src="../images/product-image.png" alt="">
-            </a>
+
+            <img class="product-swiper__img" src="../images/product-image.png" alt="">
+
           </div>
 
           <div class="product-swiper__slide swiper-slide">
-            <a class="product-swiper__link" href="#">
-              <img class="product-swiper__img" src="../images/product-image.png" alt="">
-            </a>
+
+            <img class="product-swiper__img" src="../images/product-image.png" alt="">
+
           </div>
 
           <div class="product-swiper__slide swiper-slide">
-            <a class="product-swiper__link" href="#">
-              <img class="product-swiper__img" src="../images/product-image.png" alt="">
-            </a>
+
+            <img class="product-swiper__img" src="../images/product-image.png" alt="">
+
           </div>
 
         </div>
 
-        <div class="swipers__buttons swipers__buttons--prev">
-          <svg class="swipers__buttons-icon">
-            <use xlink:href="images/sprite.svg#icon-swiper-button-prev"></use>
+        <div class="product-swiper__buttons product-swiper__buttons--prev">
+          <svg class="product-swiper__buttons-icon">
+            <use xlink:href="images/sprite.svg#icon-product-prev"></use>
           </svg>
         </div>
 
-        <div class="swipers__buttons swipers__buttons--next">
-          <svg class="swipers__buttons-icon">
-            <use xlink:href="images/sprite.svg#icon-swiper-button-next"></use>
+        <div class="product-swiper__buttons product-swiper__buttons--next">
+          <svg class="product-swiper__buttons-icon">
+            <use xlink:href="images/sprite.svg#icon-product-next"></use>
           </svg>
         </div>
 
       </div>
-
-      <!-- <div class="product__gallery-big product-swiper">
-
-        <div class="product-swiper__wrapper">
-
-          <div class="product-swiper__slide">
-            <a href="#">
-              <img src="../images/product-image-big.png" alt="">
-            </a>
-          </div>
-          <div class="product-swiper__slide">
-            <a href="#">
-              <img src="../images/product-image-big.png" alt="">
-            </a>
-          </div>
-          <div class="product-swiper__slide">
-            <a href="#">
-              <img src="../images/product-image-big.png" alt="">
-            </a>
-          </div>
-
-        </div>
-
-        <div class="swiper-pagination"></div>
-      </div>
-    </div> -->
-
       <div class="product__content">
 
         <h2 class="title product__title">Чизбургер с листьями салата</h2>
@@ -93,8 +111,14 @@
         <span class="product__price">160 грн.</span>
 
         <div class="product__trade">
-          <input class="product__amount" type="number">
-          <button class="button" type="button">Добавить в корзину</button>
+
+          <input class="product__amount" type="number" min="1" value="1">
+
+          <button class="button product__button" type="button">
+            <svg class="product__trade-icon">
+              <use xlink:href="images/sprite.svg#icon-cart"></use>
+            </svg>
+            Добавить в корзину</button>
         </div>
 
         <div class="product__delivery delivery">
@@ -112,6 +136,9 @@
 
       </div>
     </div>
+
+
+  </div>
 
 
   </div>

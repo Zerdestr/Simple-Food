@@ -53,6 +53,7 @@ function styles() {
   return src([
     'node_modules/ion-rangeslider/css/ion.rangeSlider.min.css',
     'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
+
     'node_modules/rateyo/src/jquery.rateyo.css',
     'node_modules/swiper/swiper-bundle.css',
     'app/scss/style.scss'])

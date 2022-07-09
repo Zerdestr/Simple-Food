@@ -15,7 +15,7 @@
     width: 20px;
     height: 20px;
     margin-right: 10px;
-    color: $dark;
+    color: $darkGreen-900;
     transition: color 0.3s ease-in-out;
   }
 
@@ -37,7 +37,7 @@
 
     &:active {
       .contacts__icon {
-        color: $dark;
+        color: $darkGreen-900;
       }
     }
   }

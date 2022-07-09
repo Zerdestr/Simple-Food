@@ -23,8 +23,8 @@
     }
 
     &:active {
-      color: $dark;
-      text-shadow: 2px 2px 5px rgba($color: $dark, $alpha: 0.5);
+      color: $darkGreen-900;
+      text-shadow: 2px 2px 5px rgba($color: $darkGreen-900, $alpha: 0.5);
       outline: transparent;
     }
 

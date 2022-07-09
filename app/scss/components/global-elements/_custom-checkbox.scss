@@ -3,6 +3,7 @@
   align-items: center;
   margin-bottom: 12px;
   padding-left: 34px;
+  position: relative;
 
   &:hover {
     .custom-checkbox__checkbox {
@@ -31,11 +32,11 @@
   &__checkbox {
     width: 24px;
     height: 24px;
-    background-color: $orange-bg;
+    background-color: $orange-50;
     border-radius: 3px;
     border: 1px solid $silver-200;
     position: absolute;
-    left: 30px; 
+    left: 0; 
     background-repeat: no-repeat;
     background-position: center;
     margin: 0;
