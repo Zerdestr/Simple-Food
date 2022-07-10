@@ -1,0 +1,161 @@
+.contacts-info {
+  &__inner {
+    display: flex;
+    margin-bottom: 47px;
+    flex-wrap: wrap;
+
+    @include mq("tablet") {
+      margin-bottom: 37px;
+    }
+
+    @include mq("phone") {
+      flex-direction: column;
+    }
+  }
+
+  &__wrapper {
+    margin-right: 70px;
+
+    @include mq("tablet-3") {
+      margin-right: 35px;
+    }
+
+    @include mq("tablet-2") {
+      margin: 0 auto 30px;
+      padding-right: 20px;
+    }
+
+    @include mq("phone") {
+      margin: 0 0 30px;
+    }
+  }
+
+  &__form {
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    font-size: 0;
+  }
+
+  &__input {
+    font-size: 14px;
+    line-height: 1.3;
+    padding: 13px 17px;
+    margin: 30px 0 12px;
+    max-width: 200px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    opacity: 0.9;
+
+    &::placeholder {
+      color: $gray;
+      transition: color 0.3s ease-in-out;
+    }
+
+    &:focus {
+      outline: 2px solid $orange-900;
+      border-color: transparent;
+    }
+
+    &:hover::placeholder {
+      color: $darkBlue-900;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 13px 39px 13px 39px;
+    margin: 0;
+
+    &:focus {
+      fill: $orange-900;
+      .contacts-info__icon {
+        fill: $orange-900;
+      }
+    }
+
+    &:hover {
+      .contacts-info__icon {
+        fill: $orange-900;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 16px;
+    width: 14px;
+    height: 14px;
+    fill: $white;
+  }
+
+  &__info {
+    font-size: 18px;
+    line-height: 1.3;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 70px;
+    margin-right: 70px;
+
+    @include mq("tablet-3") {
+      grid-column-gap: 50px;
+      margin-right: 35px;
+    }
+
+    @include mq("tablet-2") {
+      grid-column-gap: 30px;
+      order: 1;
+      margin: 0 auto;
+    }
+
+    @include mq("phone") {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+    max-width: max-content;
+
+    @include mq("phone") {
+      max-width: 100%;
+    }
+  }
+
+  &__link {
+    transition: color 0.3s ease-in-out;
+    display: inline-block;
+    border-radius: 5px;
+    white-space: nowrap;
+
+    @include mq("tablet") {
+      display: block;
+    }
+  }
+
+  &__address {
+    @include mq("tablet-2") {
+      margin: 0 auto 30px;
+      padding-right: 20px;
+    }
+
+    @include mq("phone") {
+      margin: 0 0 30px;
+    }
+  }
+
+  &__copy {
+    border-top: 1px solid $gray;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 14px;
+    line-height: 1;
+  }
+}

@@ -1,0 +1,82 @@
+.swipers {
+  &__pagination-bullet {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: $gray;
+    opacity: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &--active {
+      background-color: $orange-900;
+    }
+
+    &:focus {
+      outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      background-color: $orange-900;
+      opacity: 0.7;
+      outline: transparent;
+    }
+  }
+
+  &__pagination {
+    max-width: max-content;
+    margin: 0 auto;
+    font-size: 30px;
+    line-height: 1;
+  }
+
+  &__buttons-icon {
+    width: 10px;
+    height: 18px;
+    color: $gray;
+    transition: color 0.3s ease-in-out;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 34px;
+    height: 34px;
+    border: 3px solid $gray;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+    &:focus {
+      outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+    }
+
+    &:hover {
+      background-color: rgba($color: $orange-900, $alpha: 0.1);
+      border-color: rgba($color: $orange-900, $alpha: 0.5);
+
+      .swipers__buttons-icon {
+        color: rgba($color: $orange-900, $alpha: 0.5);
+      }
+    }
+
+    &:active {
+      outline: transparent;
+      border-color: transparent;
+
+      .swipers__buttons-icon {
+        color: $orange-900;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.link-effects {
+  &:focus {
+    outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+    border-radius: 5px;
+  }
+
+  &:hover {
+    color: $orange-900;
+  }
+
+  &:active {
+    color: $darkGreen-900;
+    text-shadow: 2px 2px 5px rgba($color: $darkGreen-900, $alpha: 0.5);
+    outline: transparent;
+  }
+}

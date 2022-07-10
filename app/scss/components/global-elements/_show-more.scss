@@ -1,0 +1,36 @@
+.show-more {
+  display: inline-block;
+  position: relative;
+  color: $darkBlue-900;
+  border-radius: 5px;
+  transition: color 0.3s ease-in-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 6px;
+    height: 1px;
+    background-color: $darkBlue-900;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &:focus {
+    outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+  }
+
+  &:hover {
+    color: $orange-900;
+
+    &:after {
+      background-color: transparent;
+    }
+  }
+
+  &:active {
+    color: $darkBlue-900;
+    text-shadow: 2px 2px 5px rgba($color: $darkGreen-900, $alpha: 0.5);
+    outline: transparent;
+  }
+}

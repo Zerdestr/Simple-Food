@@ -1,0 +1,85 @@
+.mobile {
+  margin-bottom: 120px;
+
+  @include mq("tablet") {
+    margin-bottom: 80px;
+  }
+
+  @include mq("phone") {
+    margin-bottom: 40px;
+  }
+
+  &__inner {
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 570px 380px;
+    display: flex;
+    align-items: center;
+
+    @include mq("tablet") {
+      background-size: 0;
+    }
+  }
+
+  &__content {
+    padding: 40px 0;
+    max-width: 540px;
+    background-color: rgba($color: $silver-100, $alpha: 0.85);
+
+    @include mq("tablet-2") {
+      max-width: 50%;
+    }
+
+    @include mq("tablet") {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 45px;
+    @include line-clamp(2);
+
+    @include mq("phone") {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    @include line-clamp(4);
+
+    @include mq("phone") {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__link {
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &:focus {
+      outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+      border-radius: 3px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+      outline: transparent;
+    }
+  }
+}

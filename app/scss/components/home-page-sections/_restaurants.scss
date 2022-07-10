@@ -1,0 +1,26 @@
+.restaurants {
+  margin-bottom: 120px;
+
+  @include mq("tablet") {
+    margin-bottom: 80px;
+  }
+
+  @include mq("phone") {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 45px;
+
+    @include mq("phone") {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__wripper {
+    margin-bottom: 30px;
+  }
+
+  
+}

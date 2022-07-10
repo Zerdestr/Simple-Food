@@ -1,0 +1,73 @@
+.interested {
+  &__title {
+    margin-right: auto;
+    position: absolute;
+    top: 0;
+
+    @include mq("tablet") {
+      font-size: 20px;
+    }
+  }
+}
+
+.interested-swiper {
+  overflow: hidden;
+  position: relative;
+  padding: 105px 2px 120px;
+
+  @include mq("tablet-2") {
+    padding-bottom: 80px;
+  }
+
+  @include mq("tablet") {
+    padding-top: 56px;
+     padding-bottom: 40px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+
+    @include mq("tablet") {
+      margin-bottom: 30px;
+    }
+  }
+  &__slide {
+    flex-shrink: 0;
+
+    .product-card {
+      margin: 0 auto;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 2px 2px 0 0;
+    max-width: 93px;
+
+    .swipers__buttons {
+      @include mq("tablet") {
+        display: none;
+      }
+    }
+
+    .swipers__buttons--prev {
+      margin-right: 25px;
+    }
+  }
+
+  &__pagination {
+    display: none;
+
+    @include mq("tablet") {
+      display: flex;
+    }
+  }
+}

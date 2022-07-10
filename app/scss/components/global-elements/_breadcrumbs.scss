@@ -1,0 +1,59 @@
+.breadcrumbs {
+  padding: 24px 0;
+  margin-bottom: 60px;
+  max-width: 100%;
+  background-color: rgba($color: $orange-900, $alpha: 0.1);
+
+  @include mq("phone") {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 5px;
+    padding-right: 12px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $orange-900;
+    }
+
+    &:active {
+      color: $darkGreen-900;
+      text-shadow: 2px 2px 5px rgba($color: $darkGreen-900, $alpha: 0.5);
+      outline: transparent;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 10px;
+      background-image: url("../images/sprite.svg#chevron");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 1.2;
+    display: block;
+
+    &:focus {
+      outline: 2px solid rgba($color: $orange-900, $alpha: 0.7);
+      border-radius: 5px;
+    }
+  }
+  &--header-fixed {
+  padding-top: 184px;
+}
+}
+
