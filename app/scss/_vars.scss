@@ -18,6 +18,9 @@ $breakpoints: (
   "tablet": 768px,
   "tablet-2": 992px,
   "tablet-3": 1200px,
+
+  "phoneH": 450px,
+  "tabletH": 600px
 );
 
 @mixin mq($width, $type: max) {
@@ -27,6 +30,18 @@ $breakpoints: (
       $width: $width - 1px;
     }
     @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin mqh($height, $type: max) {
+  @if map_has_key($breakpoints, $height) {
+    $height: map_get($breakpoints, $height);
+    @if $type == min {
+      $height: $height - 1px;
+    }
+    @media only screen and (#{$type}-height: $height) {
       @content;
     }
   }

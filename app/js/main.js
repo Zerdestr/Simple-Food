@@ -171,15 +171,12 @@ $(function () {
     }
   });
 
+
   let interestedSwiper = new Swiper('.interested-swiper', {
 
     autoplay: {
       delay: 5000,
     },
-
-    spaceBetween: 30,
-
-    slidesPerView: 5,
 
     wrapperClass: 'interested-swiper__wrapper',
 
@@ -199,6 +196,29 @@ $(function () {
     navigation: {
       nextEl: '.swipers__buttons--next',
       prevEl: '.swipers__buttons--prev',
+    },
+
+    breakpoints: {
+
+      992: {
+        slidesPerView: 5,
+        spaceBetween: 30
+      },
+
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 20
+      },
+
+      576: {
+        slidesPerView: 3,
+        spaceBetween: 10
+      },
+
+      321: {
+        slidesPerView: 2,
+        spaceBetween: 5
+      }
     }
   });
 
@@ -258,10 +278,9 @@ $(function () {
   productBigSwiper.on('slideChange', () => swipeAllSliders(productBigSwiper.activeIndex));
 
   let restaurantsSlider = null;
+  let numSlide = 0;
   let mediaQuerySize = 992;
   let mediaQuerySize2 = 768;
-  let numSlide = 0;
-
 
   $(window).on('load resize', function () {
 
@@ -269,7 +288,6 @@ $(function () {
 
 
     if (windowWidth <= mediaQuerySize) {
-
       numSlide = 2
 
     }

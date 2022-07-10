@@ -196,30 +196,32 @@
 
     <h1 class="sr-only">Страница продукта</h1>
 
-<div class="breadcrumbs">
-
-  <div class="container">
-    <ul class="breadcrumbs__list">
-      <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="index.html">Главная</a>
-      </li>
-      <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="catalog.html">Каталог товаров</a>
-      </li>
-      <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link">Чизбургер с листьями салата</a>
-      </li>
-    </ul>
-  </div>
-</div>
-
 <section class="product">
+
+  <div class="breadcrumbs">
+
+    <div class="container">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="index.html">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link">Чизбургер с листьями салата</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
   <div class="container">
     <div class="product__wrapper">
 
       <div class="product__gallery-big product-swiper-big">
 
         <button class="product-swiper-big__btn" type="button">
+          <span class="sr-only">Закрыть галерею</span>
           <svg class="product-swiper-big__btn-icon">
             <use xlink:href="images/sprite.svg#product-swiper-big-btn"></use>
           </svg>
@@ -230,29 +232,31 @@
 
           <div class="product-swiper-big__slide">
 
-            <img class="product-swiper-big__img" src="../images/product-image-big.png" alt="">
+            <img class="product-swiper-big__img" src="../images/product-image-big.png" alt="Фото товара">
 
           </div>
           <div class="product-swiper-big__slide">
 
-            <img class="product-swiper-big__img" src="../images/product-image-big.png" alt="">
+            <img class="product-swiper-big__img" src="../images/product-image-big.png" alt="Фото товара">
 
           </div>
           <div class="product-swiper-big__slide">
 
-            <img class="product-swiper-big__img" src="../images/product-image-big.png" alt="">
+            <img class="product-swiper-big__img" src="../images/product-image-big.png" alt="Фото товара">
 
           </div>
 
         </div>
 
         <div class="product-swiper__buttons product-swiper__buttons--prev">
+          <span class="sr-only">Предыдущее фото</span>
           <svg class="product-swiper__buttons-icon">
             <use xlink:href="images/sprite.svg#icon-product-prev"></use>
           </svg>
         </div>
 
         <div class="product-swiper__buttons product-swiper__buttons--next">
+          <span class="sr-only">Следующее фото</span>
           <svg class="product-swiper__buttons-icon">
             <use xlink:href="images/sprite.svg#icon-product-next"></use>
           </svg>
@@ -263,35 +267,40 @@
 
       <div class="product__gallery-min product-swiper">
 
+        <span class="sr-only">Галерея с фото товара</span>
+
+
         <div class="product-swiper__wrapper">
 
           <div class="product-swiper__slide">
 
-            <img class="product-swiper__img" src="../images/product-image.png" alt="">
+            <img class="product-swiper__img" src="../images/product-image.png" alt="Фото товара">
 
           </div>
 
           <div class="product-swiper__slide swiper-slide">
 
-            <img class="product-swiper__img" src="../images/product-image.png" alt="">
+            <img class="product-swiper__img" src="../images/product-image.png" alt="Фото товара">
 
           </div>
 
           <div class="product-swiper__slide swiper-slide">
 
-            <img class="product-swiper__img" src="../images/product-image.png" alt="">
+            <img class="product-swiper__img" src="../images/product-image.png" alt="Фото товара">
 
           </div>
 
         </div>
 
         <div class="product-swiper__buttons product-swiper__buttons--prev">
+          <span class="sr-only">Предыдущее фото</span>
           <svg class="product-swiper__buttons-icon">
             <use xlink:href="images/sprite.svg#icon-product-prev"></use>
           </svg>
         </div>
 
         <div class="product-swiper__buttons product-swiper__buttons--next">
+          <span class="sr-only">Следующее фото</span>
           <svg class="product-swiper__buttons-icon">
             <use xlink:href="images/sprite.svg#icon-product-next"></use>
           </svg>
@@ -302,12 +311,14 @@
 
         <h2 class="title product__title">Чизбургер с листьями салата</h2>
 
-        <button class="raiting" type="button" data-rateyo-rating="4" data-rateyo-read-only="true"></button>
+        <button class="raiting" type="button" data-rateyo-rating="4" data-rateyo-read-only="true"><span
+            class="sr-only">Рейтинг товара</span></button>
 
         <span class="product__price">160 грн.</span>
 
         <div class="product__trade">
 
+          <span class="sr-only">Укажите нужное количество бургеров</span>
           <input class="product__amount" type="number" min="1" value="1">
 
           <button class="button product__button" type="button">
@@ -317,10 +328,10 @@
             Добавить в корзину</button>
         </div>
 
-        <div class="product__delivery delivery">
-          <h3 class="delivery__title">Доставка и оплата</h3>
+        <div class="product__delivery product-delivery">
+          <h3 class="product-delivery__title">Доставка и оплата</h3>
 
-          <div class="delivery__info">
+          <div class="product-delivery__info">
             <p>Минимальная сумма заказа — 160 грн.</p>
             <p>Время доставки заказа — 80-140 мин.</p>
             <p>Оплата осуществляется только банковской картой.</p>
@@ -332,10 +343,6 @@
 
       </div>
     </div>
-
-
-  </div>
-
 
   </div>
 </section>
@@ -357,8 +364,7 @@
         </li>
 
         <li class="info-tabs__item">
-          <button class="info-tabs__btn" type="button" rel="reviews">Отзывы <spa>(2)</spa
-            n></button>
+          <button class="info-tabs__btn" type="button" rel="reviews">Отзывы <span>(2)</span></button>
         </li>
       </ul>
 
@@ -376,7 +382,7 @@
         </p>
       </div>
 
-      <ul class="info-tabs__content" id="characteristics" >
+      <ul class="info-tabs__content" id="characteristics">
         <li class="info-tabs__characteristic">Диаметр: <span class="info-tabs__data">20 см</span></li>
         <li class="info-tabs__characteristic">Вес: <span class="info-tabs__data">300 гр</span></li>
         <li class="info-tabs__characteristic">Калорийность (на 100г): <span class="info-tabs__data">295 ккал</span></li>
@@ -391,11 +397,15 @@
 
             <div class="review-tabs__top">
 
-              <img class="review-tabs__client-img" width="70" height="70" src="../images/client-image.png" alt="Изображение профиля клиента">
+              <div class="review-tabs__wrapper">
 
-              <div class="review-tabs__info">
-                <span class="review-tabs__name">Андрей</span>
-                <span class="review-tabs__date">10.06.2021</span>
+                <img class="review-tabs__client-img" width="70" height="70" src="../images/client-image.png"
+                  alt="Изображение профиля клиента">
+
+                <div class="review-tabs__info">
+                  <span class="review-tabs__name">Андрей</span>
+                  <span class="review-tabs__date">10.06.2021</span>
+                </div>
               </div>
 
               <button class="raiting" type="button" data-rateyo-rating="5" data-rateyo-read-only="true"></button>
@@ -413,12 +423,17 @@
 
             <div class="review-tabs__top">
 
-              <img class="review-tabs__client-img" width="70" height="70" src="../images/client-image.png" alt="Изображение профиля клиента">
+              <div class="review-tabs__wrapper">
 
-              <div class="review-tabs__info">
-                <span class="review-tabs__name">Екатерина Белая</span>
-                <span class="review-tabs__date">7.06.2021</span>
+                <img class="review-tabs__client-img" width="70" height="70" src="../images/client-image.png"
+                  alt="Изображение профиля клиента">
+
+                <div class="review-tabs__info">
+                  <span class="review-tabs__name">Екатерина Белая</span>
+                  <span class="review-tabs__date">7.06.2021</span>
+                </div>
               </div>
+
 
               <button class="raiting" type="button" data-rateyo-rating="4" data-rateyo-read-only="true"></button>
             </div>
@@ -449,7 +464,7 @@
 
               <div class="form__review">
                 <label class="form__label" for="f_review">Ваш отзыв *</label>
-                <textarea class="form__textarea form__input" id="f_review" placeholder="Введите текст отзыва"cols="30"
+                <textarea class="form__textarea form__input" id="f_review" placeholder="Введите текст отзыва" cols="30"
                   rows="4" required></textarea>
               </div>
 
@@ -489,29 +504,11 @@
     <section class="interested">
   <div class="container">
 
-
-
-
     <div class="interested__swiper interested-swiper">
 
-      <div class="interested-swiper__nav">
-
-        <h2 class="title interested__title">Вас может заинтересовать</h2>
-
-        <div class="swipers__buttons swipers__buttons--prev">
-          <svg class="swipers__buttons-icon">
-            <use xlink:href="images/sprite.svg#icon-swiper-button-prev"></use>
-          </svg>
-        </div>
+      <h2 class="title interested__title">Вас может заинтересовать</h2>
 
 
-        <div class="swipers__buttons swipers__buttons--next">
-          <svg class="swipers__buttons-icon">
-            <use xlink:href="images/sprite.svg#icon-swiper-button-next"></use>
-          </svg>
-        </div>
-
-      </div>
 
       <div class="interested-swiper__wrapper">
 
@@ -693,7 +690,24 @@
 
       </div>
 
+      <div class="interested-swiper__nav">
 
+        <div class="swipers__buttons swipers__buttons--prev">
+          <span class="sr-only">Предыдущий товар</span>
+          <svg class="swipers__buttons-icon">
+            <use xlink:href="images/sprite.svg#icon-swiper-button-prev"></use>
+          </svg>
+        </div>
+
+
+        <div class="swipers__buttons swipers__buttons--next">
+            <span class="sr-only">Следующий товар</span>
+          <svg class="swipers__buttons-icon">
+            <use xlink:href="images/sprite.svg#icon-swiper-button-next"></use>
+          </svg>
+        </div>
+
+      </div>
 
       <div class="swipers__pagination interested-swiper__pagination"></div>
 
