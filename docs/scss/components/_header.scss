@@ -5,7 +5,7 @@
   z-index: 12;
   padding: 60px 0;
   background-color: $silver-100;
-  transition: padding 0.2s ease-in-out;
+  transition: padding 0.2s ease-in-out, background-color 0.1s ease;
 
   @include mq("tablet-2") {
     padding: 35px 0;
@@ -35,16 +35,13 @@
   }
 }
 
-.mobile-acive {
-  box-shadow: inset 100vw 200px rgba($color: $dark, $alpha: 0.66);
-}
-
 .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: $silver-100;
-  
+  transition: background-color 0.1s ease;
+
   .header-nav {
     @include mq("tablet") {
       display: none;
@@ -69,6 +66,11 @@
       color: $orange-900;
     }
   }
+}
+
+.mobile-acive {
+  box-shadow: none;
+  background-color: inherit;
 }
 
 .user-nav {
