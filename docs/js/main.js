@@ -278,25 +278,7 @@ $(function () {
   productBigSwiper.on('slideChange', () => swipeAllSliders(productBigSwiper.activeIndex));
 
   let restaurantsSlider = null;
-  let numSlide = 0;
   let mediaQuerySize = 992;
-  let mediaQuerySize2 = 768;
-
-  $(window).on('load resize', function () {
-
-    var windowWidth = $(this).innerWidth();
-
-
-    if (windowWidth <= mediaQuerySize) {
-      numSlide = 2
-
-    }
-    if (windowWidth <= mediaQuerySize2) {
-      numSlide = 1
-    }
-  });
-
-
 
   function restaurantsSliderInit() {
     if (!restaurantsSlider) {
@@ -305,8 +287,6 @@ $(function () {
         autoplay: {
           delay: 5000,
         },
-
-        slidesPerView: numSlide,
 
         wrapperClass: 'swiper-for-mobile__wrapper',
 
@@ -321,6 +301,14 @@ $(function () {
           bulletClass: 'swipers__pagination-bullet',
           bulletActiveClass: 'swipers__pagination-bullet--active',
           clickable: true
+        },
+
+        breakpoints: {
+
+          576: {
+            slidesPerView: 2,
+            spaceBetween: 10
+          },
         }
       });
     }
