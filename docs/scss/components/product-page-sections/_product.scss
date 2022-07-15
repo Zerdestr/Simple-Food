@@ -356,10 +356,12 @@
 
     @include mqh("tabletH") {
       max-height: 500px;
+      max-width: 500px;
     }
 
     @include mqh("phoneH") {
       max-height: 400px;
+      max-width: 400px;
     }
 
     @include mq("phone") {

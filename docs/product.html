@@ -194,9 +194,7 @@
 
   <main class="main">
 
-    <h1 class="sr-only">Страница продукта</h1>
-
-<section class="product">
+    <section class="product">
 
   <div class="breadcrumbs">
 
@@ -232,17 +230,20 @@
 
           <div class="product-swiper-big__slide">
 
-            <img class="product-swiper-big__img" src="./images/product-image-big.png" alt="Фото товара">
+            <img class="product-swiper-big__img"   src="./images/product-image-big.png"
+              alt="Фото товара">
 
           </div>
           <div class="product-swiper-big__slide">
 
-            <img class="product-swiper-big__img" src="./images/product-image-big.png" alt="Фото товара">
+            <img class="product-swiper-big__img"   src="./images/product-image-big.png"
+              alt="Фото товара">
 
           </div>
           <div class="product-swiper-big__slide">
 
-            <img class="product-swiper-big__img" src="./images/product-image-big.png" alt="Фото товара">
+            <img class="product-swiper-big__img"   src="./images/product-image-big.png"
+              alt="Фото товара">
 
           </div>
 
@@ -274,19 +275,22 @@
 
           <div class="product-swiper__slide">
 
-            <img class="product-swiper__img" src="./images/product-image.png" alt="Фото товара">
+            <img class="product-swiper__img" width="400" height="400" src="./images/product-image.png"
+              alt="Фото товара">
 
           </div>
 
           <div class="product-swiper__slide swiper-slide">
 
-            <img class="product-swiper__img" src="./images/product-image.png" alt="Фото товара">
+            <img class="product-swiper__img" width="400" height="400" src="./images/product-image.png"
+              alt="Фото товара">
 
           </div>
 
           <div class="product-swiper__slide swiper-slide">
 
-            <img class="product-swiper__img" src="./images/product-image.png" alt="Фото товара">
+            <img class="product-swiper__img" width="400" height="400" src="./images/product-image.png"
+              alt="Фото товара">
 
           </div>
 
@@ -309,7 +313,7 @@
       </div>
       <div class="product__content">
 
-        <h2 class="title product__title">Чизбургер с листьями салата</h2>
+        <h1 class="title product__title">Чизбургер с листьями салата</h1>
 
         <button class="raiting" type="button" data-rateyo-rating="4" data-rateyo-read-only="true"><span
             class="sr-only">Рейтинг товара</span></button>
@@ -382,11 +386,11 @@
         </p>
       </div>
 
-      <ul class="info-tabs__content" id="characteristics">
-        <li class="info-tabs__characteristic">Диаметр: <span class="info-tabs__data">20 см</span></li>
-        <li class="info-tabs__characteristic">Вес: <span class="info-tabs__data">300 гр</span></li>
-        <li class="info-tabs__characteristic">Калорийность (на 100г): <span class="info-tabs__data">295 ккал</span></li>
-        <li class="info-tabs__characteristic">Срок хранения:<span class="info-tabs__data">до 3 дней</span></li>
+      <ul class="info-tabs__content info-tabs__content--characteristics" id="characteristics">
+        <li>Диаметр: <span>20 см</span></li>
+        <li>Вес: <span>300 гр</span></li>
+        <li>Калорийность (на 100г): <span>295 ккал</span></li>
+        <li>Срок хранения:<span>до 3 дней</span></li>
       </ul>
 
       <div class="info-tabs__content reviews-tabs" id="reviews">
@@ -404,7 +408,7 @@
 
                 <div class="review-tabs__info">
                   <span class="review-tabs__name">Андрей</span>
-                  <span class="review-tabs__date">10.06.2021</span>
+                  <time class="review-tabs__date">10.06.2021</time>
                 </div>
               </div>
 
@@ -430,7 +434,7 @@
 
                 <div class="review-tabs__info">
                   <span class="review-tabs__name">Екатерина Белая</span>
-                  <span class="review-tabs__date">7.06.2021</span>
+                  <time class="review-tabs__date">7.06.2021</time>
                 </div>
               </div>
 
@@ -472,12 +476,12 @@
 
                 <div class="form__name">
                   <label class="form__label" for="f_name">Имя</label>
-                  <input class="form__input" id="f_name" placeholder="Введите ваше имя" type="text">
+                  <input class="input form__input" id="f_name" placeholder="Введите ваше имя" type="text">
                 </div>
 
                 <div class="form__email">
                   <label class="form__label" for="f_email">Email *</label>
-                  <input class="form__input" id="f_email" placeholder="youremail@mail.com" type="email" required>
+                  <input class="input form__input" id="f_email" placeholder="youremail@mail.com" type="email" required>
                 </div>
 
               </div>
@@ -736,7 +740,7 @@
 
             <label class="contacts-info__label" for="get-email">Поле для ввода ващего имейла</label>
 
-            <input class="contacts-info__input" id="get-email" type="email" placeholder="Ваш email" name="femail"
+            <input class="input contacts-info__input" id="get-email" type="email" placeholder="Ваш email" name="femail"
               required="required">
 
             <button class="button contacts-info__button" type="submit">
